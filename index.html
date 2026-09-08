@@ -13,51 +13,72 @@
     <p>Explora mis facetas y técnicas creativas</p>
   </header>
 
-  <!-- Pestañas / Menú de navegación -->
+ <!-- Pestañas / Menú de navegación -->
   <nav class="pestanas">
-    <button class="btn-pestana active" onclick="abrirSeccion(event, 'pintura')">Pintura</button>
+    <button class="btn-pestana active" onclick="abrirSeccion(event, 'oleo')">Óleo</button>
+    <button class="btn-pestana" onclick="abrirSeccion(event, 'acrilico')">Acrílico</button>
+    <button class="btn-pestana" onclick="abrirSeccion(event, 'grafito')">Dibujo en grafito</button>
     <button class="btn-pestana" onclick="abrirSeccion(event, 'escultura')">Escultura</button>
-    <button class="btn-pestana" onclick="abrirSeccion(event, 'dibujo')">Dibujo Digital</button>
+    <button class="btn-pestana" onclick="abrirSeccion(event, 'muralismo')">Muralismo</button>
   </nav>
 
   <main>
-    <!-- Sección 1: Pintura -->
-    <section id="pintura" class="contenido-seccion active">
-      <h2>Pintura / Óleo y Acrílico</h2>
+    <!-- Sección 1: Óleo -->
+    <section id="oleo" class="contenido-seccion active">
+      <h2>Pintura al Óleo</h2>
       <div class="galeria">
         <div class="tarjeta">
-          <img src="https://via.placeholder.com/400x300" alt="Obra 1">
-          <h3>Nombre de la Obra 1</h3>
-          <p>Técnica: Óleo sobre lienzo. 2024.</p>
-        </div>
-        <div class="tarjeta">
-          <img src="https://via.placeholder.com/400x300" alt="Obra 2">
-          <h3>Nombre de la Obra 2</h3>
-          <p>Técnica: Acrílico. 2023.</p>
+          <img src="imagenes/tu_obra_1.jpg" alt="Obra al óleo">
+          <h3>Nombre de la Obra</h3>
+          <p>Técnica: Óleo sobre lienzo.</p>
         </div>
       </div>
     </section>
 
-    <!-- Sección 2: Escultura -->
+    <!-- Sección 2: Acrílico -->
+    <section id="acrilico" class="contenido-seccion">
+      <h2>Pintura en Acrílico</h2>
+      <div class="galeria">
+        <div class="tarjeta">
+          <img src="imagenes/tu_obra_2.jpg" alt="Obra en acrílico">
+          <h3>Nombre de la Obra</h3>
+          <p>Técnica: Acrílico sobre madera.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 3: Dibujo en grafito -->
+    <section id="grafito" class="contenido-seccion">
+      <h2>Dibujo en Grafito</h2>
+      <div class="galeria">
+        <div class="tarjeta">
+          <img src="imagenes/tu_obra_3.jpg" alt="Dibujo en grafito">
+          <h3>Nombre del Dibujo</h3>
+          <p>Técnica: Grafito sobre papel.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 4: Escultura -->
     <section id="escultura" class="contenido-seccion">
-      <h2>Escultura y Modelado</h2>
+      <h2>Escultura</h2>
       <div class="galeria">
         <div class="tarjeta">
-          <img src="https://via.placeholder.com/400x300" alt="Escultura 1">
+          <img src="imagenes/tu_obra_4.jpg" alt="Escultura">
           <h3>Nombre de la Escultura</h3>
-          <p>Técnica: Arcilla polimérica.</p>
+          <p>Técnica: Escultura y modelado.</p>
         </div>
       </div>
     </section>
 
-    <!-- Sección 3: Dibujo Digital -->
-    <section id="dibujo" class="contenido-seccion">
-      <h2>Dibujo e Ilustración Digital</h2>
+    <!-- Sección 5: Muralismo -->
+    <section id="muralismo" class="contenido-seccion">
+      <h2>Muralismo</h2>
       <div class="galeria">
         <div class="tarjeta">
-          <img src="https://via.placeholder.com/400x300" alt="Ilustración 1">
-          <h3>Ilustración Concept</h3>
-          <p>Técnica: Digital (Procreate / Photoshop).</p>
+          <img src="imagenes/tu_obra_5.jpg" alt="Mural">
+          <h3>Nombre del Mural</h3>
+          <p>Técnica: Pintura mural.</p>
         </div>
       </div>
     </section>
