@@ -1,0 +1,13 @@
+function abrirSeccion(evt, nombreSeccion) {
+  // Ocultar todas las secciones
+  const secciones = document.querySelectorAll('.contenido-seccion');
+  secciones.forEach(sec => sec.classList.remove('active'));
+
+  // Quitar estado activo de todos los botones
+  const botones = document.querySelectorAll('.btn-pestana');
+  botones.forEach(btn => btn.classList.remove('active'));
+
+  // Mostrar la sección seleccionada y marcar el botón activo
+  document.getElementById(nombreSeccion).classList.add('active');
+  evt.currentTarget.classList.add('active');
+}

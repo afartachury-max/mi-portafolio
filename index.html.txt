@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio Artístico</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Mi Portafolio Artístico</h1>
+    <p>Explora mis facetas y técnicas creativas</p>
+  </header>
+
+  <!-- Pestañas / Menú de navegación -->
+  <nav class="pestanas">
+    <button class="btn-pestana active" onclick="abrirSeccion(event, 'pintura')">Pintura</button>
+    <button class="btn-pestana" onclick="abrirSeccion(event, 'escultura')">Escultura</button>
+    <button class="btn-pestana" onclick="abrirSeccion(event, 'dibujo')">Dibujo Digital</button>
+  </nav>
+
+  <main>
+    <!-- Sección 1: Pintura -->
+    <section id="pintura" class="contenido-seccion active">
+      <h2>Pintura / Óleo y Acrílico</h2>
+      <div class="galeria">
+        <div class="tarjeta">
+          <img src="https://via.placeholder.com/400x300" alt="Obra 1">
+          <h3>Nombre de la Obra 1</h3>
+          <p>Técnica: Óleo sobre lienzo. 2024.</p>
+        </div>
+        <div class="tarjeta">
+          <img src="https://via.placeholder.com/400x300" alt="Obra 2">
+          <h3>Nombre de la Obra 2</h3>
+          <p>Técnica: Acrílico. 2023.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 2: Escultura -->
+    <section id="escultura" class="contenido-seccion">
+      <h2>Escultura y Modelado</h2>
+      <div class="galeria">
+        <div class="tarjeta">
+          <img src="https://via.placeholder.com/400x300" alt="Escultura 1">
+          <h3>Nombre de la Escultura</h3>
+          <p>Técnica: Arcilla polimérica.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 3: Dibujo Digital -->
+    <section id="dibujo" class="contenido-seccion">
+      <h2>Dibujo e Ilustración Digital</h2>
+      <div class="galeria">
+        <div class="tarjeta">
+          <img src="https://via.placeholder.com/400x300" alt="Ilustración 1">
+          <h3>Ilustración Concept</h3>
+          <p>Técnica: Digital (Procreate / Photoshop).</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contacto: tuemail@ejemplo.com | Redes sociales: @tu_usuario</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
