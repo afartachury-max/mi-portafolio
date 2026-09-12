@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-<head<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe.min.css">>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Portafolio Artístico</title>
   <link rel="stylesheet" href="style.css">
+  <!-- CSS de PhotoSwipe para el visor con zoom -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe.min.css">
 </head>
 <body>
 
@@ -39,7 +41,13 @@
       <h2>Pintura al Óleo</h2>
       <div class="galeria">
         <div class="tarjeta">
-          <img src="1%20Oleo/Oleo%201.jpg" alt="Obra al Óleo">
+          <a href="1%20Oleo/Oleo%201.jpg" 
+             class="lightbox-link" 
+             data-pswp-width="1920" 
+             data-pswp-height="1080" 
+             target="_blank">
+            <img src="1%20Oleo/Oleo%201.jpg" alt="Obra al Óleo">
+          </a>
           <h3>Proyecto al Óleo</h3>
           <p>Técnica: Óleo sobre lienzo Obra Poliptica.</p>
         </div>
@@ -51,7 +59,13 @@
       <h2>Pintura en Acrílico</h2>
       <div class="galeria">
         <div class="tarjeta">
-          <img src="imagenes/tu_obra_2.jpg" alt="Obra en acrílico">
+          <a href="imagenes/tu_obra_2.jpg" 
+             class="lightbox-link" 
+             data-pswp-width="1920" 
+             data-pswp-height="1080" 
+             target="_blank">
+            <img src="imagenes/tu_obra_2.jpg" alt="Obra en acrílico">
+          </a>
           <h3>Nombre de la Obra</h3>
           <p>Técnica: Acrílico sobre madera.</p>
         </div>
@@ -63,7 +77,13 @@
       <h2>Dibujo en Grafito</h2>
       <div class="galeria">
         <div class="tarjeta">
-          <img src="imagenes/tu_obra_3.jpg" alt="Dibujo en grafito">
+          <a href="imagenes/tu_obra_3.jpg" 
+             class="lightbox-link" 
+             data-pswp-width="1920" 
+             data-pswp-height="1080" 
+             target="_blank">
+            <img src="imagenes/tu_obra_3.jpg" alt="Dibujo en grafito">
+          </a>
           <h3>Nombre del Dibujo</h3>
           <p>Técnica: Grafito sobre papel.</p>
         </div>
@@ -75,7 +95,13 @@
       <h2>Escultura</h2>
       <div class="galeria">
         <div class="tarjeta">
-          <img src="imagenes/tu_obra_4.jpg" alt="Escultura">
+          <a href="imagenes/tu_obra_4.jpg" 
+             class="lightbox-link" 
+             data-pswp-width="1920" 
+             data-pswp-height="1080" 
+             target="_blank">
+            <img src="imagenes/tu_obra_4.jpg" alt="Escultura">
+          </a>
           <h3>Nombre de la Escultura</h3>
           <p>Técnica: Escultura y modelado.</p>
         </div>
@@ -87,12 +113,24 @@
       <h2>Muralismo</h2>
       <div class="galeria">
         <div class="tarjeta">
-          <img src="5%20Muralismo/Mural%201.webp" alt="Mural 1">
+          <a href="5%20Muralismo/Mural%201.webp" 
+             class="lightbox-link" 
+             data-pswp-width="1920" 
+             data-pswp-height="1080" 
+             target="_blank">
+            <img src="5%20Muralismo/Mural%201.webp" alt="Mural 1">
+          </a>
           <h3>Obra Mural Tutankamon</h3>
           <p>Técnica: Pintura acrilica sobre pared.</p>
         </div>
         <div class="tarjeta">
-          <img src="5%20Muralismo/Mural%202.webp" alt="Mural 2">
+          <a href="5%20Muralismo/Mural%202.webp" 
+             class="lightbox-link" 
+             data-pswp-width="1920" 
+             data-pswp-height="1080" 
+             target="_blank">
+            <img src="5%20Muralismo/Mural%202.webp" alt="Mural 2">
+          </a>
           <h3>Obra Tutankamon</h3>
           <p>Técnica: Pintura acrilica sobre pared.</p>
         </div>
