@@ -2,8 +2,9 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
-  color: #333;
+  header {
+  background-color: #184D35;
+  color: #FFFFFF; /* Mantiene el texto en blanco para buen contraste */
 }
 
 header {
