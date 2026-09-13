@@ -134,3 +134,14 @@ section {
   color: white;
   margin-top: 2rem;
 }
+/* Ajustar tamaño de imágenes en las tarjetas */
+.tarjeta-obra img,
+.tarjeta img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  border-radius: 8px; /* Opcional: redondea un poco los bordes */
+  object-fit: cover;
+}
+  
