@@ -1,7 +1,7 @@
 import PhotoSwipeLightbox from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe-lightbox.esm.min.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Inicializar PhotoSwipe (Mantiene el Zoom activo para todas las galerías)
+  // 1. Inicializar PhotoSwipe
   const lightbox = new PhotoSwipeLightbox({
     gallery: '.galeria, .galeria-grid',
     children: 'a.lightbox-link',
@@ -20,14 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
     pestana.addEventListener('click', (e) => {
       e.preventDefault();
 
-      // Desactivar pestañas y secciones previas
+      // Desactivar pestañas y secciones
       pestanas.forEach((p) => p.classList.remove('active'));
       secciones.forEach((s) => s.classList.remove('active'));
 
-      // Activar pestaña seleccionada
+      // Activar pestaña actual
       pestana.classList.add('active');
 
-      // Mostrar la sección correspondiente
+      // Mostrar sección
       const seccionId = pestana.getAttribute('data-seccion');
       const seccionDestino = document.getElementById(seccionId);
       if (seccionDestino) {
