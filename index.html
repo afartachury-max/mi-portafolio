@@ -1,89 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
-<header style="text-align: center; padding: 20px;">
-  <!-- Ajusta la ruta 'img/perfil.jpg' por la ubicación real de tu foto -->
-  <img src="perfil1" alt="perfil" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover;">
-  
-  <h1>Flavio Achury</h1>
-  <p>Artista Plástico & Muralista</p>
-  
-  <!-- Enlaces con mensaje directo en WhatsApp -->
-  <nav>
-    <a href="https://wa.me/324783638?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20tus%20obras" target="_blank">WhatsApp Business</a> |
-    <a href="https://instagram.com/af.achury" target="_blank">Instagram</a> |
-    <a href="mailto:afart.achury@gmail.com">Correo Electrónico</a>
-  </nav>
-</header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flavio Achury - Portafolio Artístico</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
+  <!-- Sección de Presentación / Perfil -->
   <section id="presentacion" class="card-container">
-    <img src="muralismo/tu-foto.jpg" alt="Foto de perfil" class="profile-img">
-    <h1>Tu Nombre</h1>
+    <img src="perfil1" alt="Foto de perfil" class="profile-img">
+    <h1>Flavio Achury</h1>
     <p class="bio">Artista Plástico & Muralista</p>
     <div class="links-grid">
-      <a href="https://wa.me/573247836386" target="_blank" class="btn btn-whatsapp">WhatsApp Business</a>
+      <a href="https://wa.me/573247836386?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20tus%20obras" target="_blank" class="btn btn-whatsapp">WhatsApp Business</a>
       <a href="https://instagram.com/af.achury" target="_blank" class="btn btn-instagram">Instagram</a>
       <a href="mailto:afart.achury@gmail.com" class="btn btn-email">Correo Electrónico</a>
-      <a href="#portafolio" class="btn btn-portfolio">Ver Mi Portafolio</a>
+      <a href="#oleo" class="btn btn-portfolio">Ver Mi Portafolio</a>
     </div>
   </section>
 
-  <header>
+  <header style="text-align: center; padding: 20px;">
     <h1>Mi Portafolio Artístico</h1>
     <p>Explora mis facetas y técnicas creativas</p>
   </header>
 
-<!-- Navegación por Categorías -->
-<nav class="categorias">
-  <a href="#oleo">Óleo</a>
-  <a href="#acrilico">Acrílico</a>
-  <a href="#grafito">Dibujo en grafito</a>
-  <a href="#escultura">Escultura</a>
-  <a href="#muralismo">Muralismo</a>
-</nav>
+  <!-- Navegación por Categorías -->
+  <nav class="categorias">
+    <a href="#oleo">Óleo</a>
+    <a href="#acrilico">Acrílico</a>
+    <a href="#grafito">Dibujo en grafito</a>
+    <a href="#escultura">Escultura</a>
+    <a href="#muralismo">Muralismo</a>
+  </nav>
 
-<main>
-  <!-- Sección Óleo -->
-  <section id="oleo" class="contenido-seccion active">
-    <h2>Pintura al Óleo</h2>
-    
-    <div class="galeria-grid">
-      <!-- Obra 1 -->
-      <article class="tarjeta-obra">
-        <a href="1Oleo/1Frida.webp" class="lightbox-link" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
-          <img src="1Oleo/1Frida.webp" alt="Serie Frida - Pieza 1">
-        </a>
-        <h3>Serie Frida - Pieza 1</h3>
-        <p><strong>Técnica:</strong> Óleo sobre lienzo</p>
-        <p><strong>Dimensiones:</strong> 80 x 60 cm</p>
-        <p><strong>Estado:</strong> <span style="color: green; font-weight: bold;">Disponible</span></p>
-      </article>
+  <main>
+    <!-- Sección 1: Óleo -->
+    <section id="oleo" class="contenido-seccion active">
+      <h2>Pintura al Óleo</h2>
+      <div class="galeria-grid">
+        <!-- Obra 1 -->
+        <article class="tarjeta-obra">
+          <a href="1Oleo/1Frida.webp" class="lightbox-link" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
+            <img src="1Oleo/1Frida.webp" alt="Serie Frida - Pieza 1">
+          </a>
+          <h3>Serie Frida - Pieza 1</h3>
+          <p><strong>Técnica:</strong> Óleo sobre lienzo</p>
+          <p><strong>Dimensiones:</strong> 80 x 60 cm</p>
+          <p><strong>Estado:</strong> <span style="color: green; font-weight: bold;">Disponible</span></p>
+        </article>
 
-      <!-- Obra 2 -->
-      <article class="tarjeta-obra">
-        <a href="1Oleo/2Frida.webp" class="lightbox-link" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
-          <img src="1Oleo/2Frida.webp" alt="Serie Frida - Pieza 2">
-        </a>
-        <h3>Serie Frida - Pieza 2</h3>
-        <p><strong>Técnica:</strong> Óleo sobre lienzo</p>
-        <p><strong>Dimensiones:</strong> 100 x 70 cm</p>
-        <p><strong>Estado:</strong> <span style="color: gray;">Colección Privada</span></p>
-      </article>
-    </div>
-  </section>
-  </div>
-</section>
+        <!-- Obra 2 -->
+        <article class="tarjeta-obra">
+          <a href="1Oleo/2Frida.webp" class="lightbox-link" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
+            <img src="1Oleo/2Frida.webp" alt="Serie Frida - Pieza 2">
+          </a>
+          <h3>Serie Frida - Pieza 2</h3>
+          <p><strong>Técnica:</strong> Óleo sobre lienzo</p>
+          <p><strong>Dimensiones:</strong> 100 x 70 cm</p>
+          <p><strong>Estado:</strong> <span style="color: gray;">Colección Privada</span></p>
+        </article>
+      </div>
+    </section>
 
     <!-- Sección 2: Acrílico -->
     <section id="acrilico" class="contenido-seccion">
       <h2>Pintura en Acrílico</h2>
       <div class="galeria">
         <div class="tarjeta">
-          <a href="imagenes/tu_obra_2.jpg" 
-             class="lightbox-link" 
-             data-pswp-width="1920" 
-             data-pswp-height="1080" 
-             target="_blank">
+          <a href="imagenes/tu_obra_2.jpg" class="lightbox-link" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
             <img src="imagenes/tu_obra_2.jpg" alt="Obra en acrílico">
           </a>
           <h3>Nombre de la Obra</h3>
@@ -97,11 +83,7 @@
       <h2>Dibujo en Grafito</h2>
       <div class="galeria">
         <div class="tarjeta">
-          <a href="imagenes/tu_obra_3.jpg" 
-             class="lightbox-link" 
-             data-pswp-width="1920" 
-             data-pswp-height="1080" 
-             target="_blank">
+          <a href="imagenes/tu_obra_3.jpg" class="lightbox-link" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
             <img src="imagenes/tu_obra_3.jpg" alt="Dibujo en grafito">
           </a>
           <h3>Nombre del Dibujo</h3>
@@ -115,11 +97,7 @@
       <h2>Escultura</h2>
       <div class="galeria">
         <div class="tarjeta">
-          <a href="imagenes/tu_obra_4.jpg" 
-             class="lightbox-link" 
-             data-pswp-width="1920" 
-             data-pswp-height="1080" 
-             target="_blank">
+          <a href="imagenes/tu_obra_4.jpg" class="lightbox-link" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
             <img src="imagenes/tu_obra_4.jpg" alt="Escultura">
           </a>
           <h3>Nombre de la Escultura</h3>
@@ -133,22 +111,14 @@
       <h2>Muralismo</h2>
       <div class="galeria">
         <div class="tarjeta">
-          <a href="5%20Muralismo/Mural%201.webp" 
-             class="lightbox-link" 
-             data-pswp-width="1920" 
-             data-pswp-height="1080" 
-             target="_blank">
+          <a href="5%20Muralismo/Mural%201.webp" class="lightbox-link" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
             <img src="5%20Muralismo/Mural%201.webp" alt="Mural 1">
           </a>
           <h3>Obra Mural Tutankamon</h3>
           <p>Técnica: Pintura acrilica sobre pared.</p>
         </div>
         <div class="tarjeta">
-          <a href="5%20Muralismo/Mural%202.webp" 
-             class="lightbox-link" 
-             data-pswp-width="1920" 
-             data-pswp-height="1080" 
-             target="_blank">
+          <a href="5%20Muralismo/Mural%202.webp" class="lightbox-link" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
             <img src="5%20Muralismo/Mural%202.webp" alt="Mural 2">
           </a>
           <h3>Obra Tutankamon</h3>
