@@ -120,6 +120,15 @@ footer {
   background-color: #333;
   color: #fff;
 }
+  /* Aplicar desplazamiento suave a todo el documento */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Espaciado para que el encabezado o menú no tape el título al desplazarse */
+section {
+  scroll-margin-top: 20px;
+}
   padding: 1.5rem;
   background-color: #1a1a1a;
   color: white;
