@@ -33,46 +33,44 @@
     <p>Explora mis facetas y técnicas creativas</p>
   </header>
 
-  <nav class="pestanas">
-    <button class="btn-pestana active" onclick="abrirSeccion(event, 'oleo')">Óleo</button>
-    <button class="btn-pestana" onclick="abrirSeccion(event, 'acrilico')">Acrílico</button>
-    <button class="btn-pestana" onclick="abrirSeccion(event, 'grafito')">Dibujo en grafito</button>
-    <button class="btn-pestana" onclick="abrirSeccion(event, 'escultura')">Escultura</button>
-    <button class="btn-pestana" onclick="abrirSeccion(event, 'muralismo')">Muralismo</button>
-  </nav>
+<!-- Navegación por Categorías -->
+<nav class="categorias">
+  <a href="#oleo">Óleo</a>
+  <a href="#acrilico">Acrílico</a>
+  <a href="#grafito">Dibujo en grafito</a>
+  <a href="#escultura">Escultura</a>
+  <a href="#muralismo">Muralismo</a>
+</nav>
 
-  <main>
- <!-- Sección 1: Óleo -->
-<section id="oleo" class="contenido-seccion active">
-  <h2>Pintura al Óleo</h2>
-  <div class="galeria">
+<main>
+  <!-- Sección Óleo -->
+  <section id="oleo" class="contenido-seccion active">
+    <h2>Pintura al Óleo</h2>
     
-    <!-- Obra 1: Frida 1 -->
-    <div class="tarjeta">
-      <a href="1Oleo/1Frida.webp" 
-         class="lightbox-link" 
-         data-pswp-width="1920" 
-         data-pswp-height="1080" 
-         target="_blank">
-        <img src="1Oleo/1Frida.webp" alt="Obra Frida 1">
-      </a>
-      <h3>Proyecto Frida</h3>
-      <p>Técnica: Óleo sobre lienzo coleccion privada.</p>
-    </div>
+    <div class="galeria-grid">
+      <!-- Obra 1 -->
+      <article class="tarjeta-obra">
+        <a href="1Oleo/1Frida.webp" class="lightbox-link" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
+          <img src="1Oleo/1Frida.webp" alt="Serie Frida - Pieza 1">
+        </a>
+        <h3>Serie Frida - Pieza 1</h3>
+        <p><strong>Técnica:</strong> Óleo sobre lienzo</p>
+        <p><strong>Dimensiones:</strong> 80 x 60 cm</p>
+        <p><strong>Estado:</strong> <span style="color: green; font-weight: bold;">Disponible</span></p>
+      </article>
 
-    <!-- Obra 2: Frida 2 -->
-    <div class="tarjeta">
-      <a href="1Oleo/2Frida.webp" 
-         class="lightbox-link" 
-         data-pswp-width="1920" 
-         data-pswp-height="1080" 
-         target="_blank">
-        <img src="1Oleo/2Frida.webp" alt="Obra Frida 2">
-      </a>
-      <h3>Proyecto Frida</h3>
-      <p>Técnica: Óleo sobre lienzo coleccion privada.</p>
+      <!-- Obra 2 -->
+      <article class="tarjeta-obra">
+        <a href="1Oleo/2Frida.webp" class="lightbox-link" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
+          <img src="1Oleo/2Frida.webp" alt="Serie Frida - Pieza 2">
+        </a>
+        <h3>Serie Frida - Pieza 2</h3>
+        <p><strong>Técnica:</strong> Óleo sobre lienzo</p>
+        <p><strong>Dimensiones:</strong> 100 x 70 cm</p>
+        <p><strong>Estado:</strong> <span style="color: gray;">Colección Privada</span></p>
+      </article>
     </div>
-
+  </section>
   </div>
 </section>
 
