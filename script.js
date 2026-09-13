@@ -1,43 +1,38 @@
-function abrirSeccion(evt, nombreSeccion) {
-  // Ocultar todas las secciones
-  const secciones = document.querySelectorAll('.contenido-seccion');
-  secciones.forEach(sec => sec.classList.remove('active'));
-
-  // Quitar estado activo de todos los botones
-  const botones = document.querySelectorAll('.btn-pestana');
-  botones.forEach(btn => btn.classList.remove('active'));
-
-  // Mostrar la sección seleccionada y marcar el botón activo
-  document.getElementById(nombreSeccion).classList.add('active');
-  evt.currentTarget.classList.add('active');
-}
 import PhotoSwipeLightbox from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe-lightbox.esm.min.js';
 
-// Función para cambiar de pestañas en el portafolio
-window.abrirSeccion = function(evt, nombreSeccion) {
-  // Ocultar todas las secciones
-  const secciones = document.querySelectorAll('.contenido-seccion');
-  secciones.forEach(sec => sec.classList.remove('active'));
-
-  // Quitar estado activo de todos los botones
-  const botones = document.querySelectorAll('.btn-pestana');
-  botones.forEach(btn => btn.classList.remove('active'));
-
-  // Mostrar la sección seleccionada y marcar el botón activo
-  document.getElementById(nombreSeccion).classList.add('active');
-  evt.currentTarget.classList.add('active');
-};
-
-// Inicializar el visor PhotoSwipe con soporte para zoom
 document.addEventListener('DOMContentLoaded', () => {
+  // 1. Inicializar PhotoSwipe (Mantiene el Zoom activo para todas las galerías)
   const lightbox = new PhotoSwipeLightbox({
-    gallery: '.galeria',
+    gallery: '.galeria, .galeria-grid',
     children: 'a.lightbox-link',
     initialZoomLevel: 'fit',
     secondaryZoomLevel: 2,
     maxZoomLevel: 4,
     pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe.esm.min.js')
   });
-
   lightbox.init();
+
+  // 2. Control de navegación entre pestañas
+  const pestanas = document.querySelectorAll('.pestana');
+  const secciones = document.querySelectorAll('.contenido-seccion');
+
+  pestanas.forEach((pestana) => {
+    pestana.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      // Desactivar pestañas y secciones previas
+      pestanas.forEach((p) => p.classList.remove('active'));
+      secciones.forEach((s) => s.classList.remove('active'));
+
+      // Activar pestaña seleccionada
+      pestana.classList.add('active');
+
+      // Mostrar la sección correspondiente
+      const seccionId = pestana.getAttribute('data-seccion');
+      const seccionDestino = document.getElementById(seccionId);
+      if (seccionDestino) {
+        seccionDestino.classList.add('active');
+      }
+    });
+  });
 });
