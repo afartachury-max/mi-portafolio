@@ -27,18 +27,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2. Arreglo completo con todas las obras al óleo
   const obrasOleo = [
-    { archivo: "1Frida.webp", titulo: "Serie Frida - Pieza 1", dimensiones: "80 x 60 cm", estado: "Colección Privada", disponible: false },
-    { archivo: "2Frida.webp", titulo: "Serie Frida - Pieza 2", dimensiones: "100 x 70 cm", estado: "Colección Privada", disponible: false },
-    { archivo: "3NYD.webp", titulo: "Serie NYD - Pieza 3", dimensiones: "60 x 50 cm", estado: "Colección Privada", disponible: false },
-    { archivo: "4NYD.webp", titulo: "Serie NYD - Pieza 4", dimensiones: "60 x 50 cm", estado: "Colección Privada", disponible: false },
-    { archivo: "5STG.webp", titulo: "Serie STG - Pieza 5", dimensiones: "70 x 50 cm", estado: "Colección Privada", disponible: false },
-    { archivo: "6STG.webp", titulo: "Serie STG - Pieza 6", dimensiones: "70 x 50 cm", estado: "Colección Privada", disponible: false },
-    { archivo: "7RD.webp", titulo: "Serie RD - Pieza 7", dimensiones: "80 x 60 cm", estado: "Colección Privada", disponible: false },
-    { archivo: "8RD.webp", titulo: "Serie RD - Pieza 8", dimensiones: "80 x 60 cm", estado: "Colección Privada", disponible: false },
-    { archivo: "9RD.webp", titulo: "Serie RD - Pieza 9", dimensiones: "80 x 60 cm", estado: "Colección Privada", disponible: false },
-    { archivo: "10RD.webp", titulo: "Serie RD - Pieza 10", dimensiones: "80 x 60 cm", estado: "Colección Privada", disponible: false },
-    { archivo: "11SG.webp", titulo: "Serie SG - Pieza 11", dimensiones: "90 x 70 cm", estado: "Colección Privada", disponible: false },
-    { archivo: "12AZ.webp", titulo: "Serie AZ - Pieza 12", dimensiones: "100 x 80 cm", estado: "Colección Privada", disponible: false }
+    { archivo: "1Frida.webp", titulo: "Alma de Frida", dimensiones: "160 x 90  cm", estado: "Colección Privada", disponible: false },
+    { archivo: "2Frida.webp", titulo: "Alma de Frida", dimensiones: "160 x 90 cm", estado: "Colección Privada", disponible: false },
+    { archivo: "3NYD.webp", titulo: "Movimiento en color", dimensiones: "340 x 110 cm", estado: "Colección Privada", disponible: false },
+    { archivo: "4NYD.webp", titulo: "Movimiento en color", dimensiones: "340 x 110  cm", estado: "Colección Privada", disponible: false },
+    { archivo: "5STG.webp", titulo: "Pasion en NY", dimensiones: "70 x 50 cm", estado: "Colección Privada", disponible: false },
+    { archivo: "6STG.webp", titulo: "Pasion en NY", dimensiones: "70 x 50 cm", estado: "Colección Privada", disponible: false },
+    { archivo: "7RD.webp", titulo: "Pausa Dorada", dimensiones: "170 x 100 cm", estado: "Colección Privada", disponible: false },
+    { archivo: "8RD.webp", titulo: "Pausa Dorada", dimensiones: "170 x 100 ", estado: "Colección Privada", disponible: false },
+    { archivo: "9RD.webp", titulo: "Fluir alado", dimensiones: "170 x 100 cm", estado: "Colección Privada", disponible: false },
+    { archivo: "10RD.webp", titulo: "Fluir alado ", dimensiones: "170 x 100 cm", estado: "Colección Privada", disponible: false },
+    { archivo: "11SG.webp", titulo: "Amor al Oleo", dimensiones: "90 x 70 cm", estado: "Colección Privada", disponible: false },
+    { archivo: "12AZ.webp", titulo: "Para los nietos ", dimensiones: "80 x 60 cm", estado: "Colección Privada", disponible: false }
   ];
 
   const rutaCarpeta = "./1Oleo/";
