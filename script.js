@@ -1,20 +1,7 @@
 import PhotoSwipeLightbox from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe-lightbox.esm.min.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Inicializar PhotoSwipe para navegación fluida en la misma página
-  const lightbox = new PhotoSwipeLightbox({
-    gallery: '#galeria-oleo, #galeria-muralismo',
-    children: 'a.lightbox-link',
-    showHideAnimationType: 'fade',
-    bgOpacity: 0.9,
-    initialZoomLevel: 'fit',
-    secondaryZoomLevel: 2,
-    maxZoomLevel: 4,
-    pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe.esm.min.js')
-  });
-  lightbox.init();
-
-  // 2. Control de navegación entre pestañas
+  // 1. Control de navegación entre pestañas
   const pestanas = document.querySelectorAll('.pestana');
   const secciones = document.querySelectorAll('.contenido-seccion');
 
@@ -22,11 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
     pestana.addEventListener('click', (e) => {
       e.preventDefault();
 
+      // Desactivar pestañas y secciones
       pestanas.forEach((p) => p.classList.remove('active'));
       secciones.forEach((s) => s.classList.remove('active'));
 
+      // Activar pestaña actual
       pestana.classList.add('active');
 
+      // Mostrar sección
       const seccionId = pestana.getAttribute('data-seccion');
       const seccionDestino = document.getElementById(seccionId);
       if (seccionDestino) {
@@ -35,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 3. Catálogo de Óleo (12 obras)
+  // 2. Arreglo completo de la categoría Óleo
   const obrasOleo = [
     { archivo: "1Frida.webp", titulo: "Serie Frida - Pieza 1", dimensiones: "80 x 60 cm", estado: "Colección Privada", disponible: false },
     { archivo: "2Frida.webp", titulo: "Serie Frida - Pieza 2", dimensiones: "100 x 70 cm", estado: "Colección Privada", disponible: false },
@@ -61,22 +51,22 @@ document.addEventListener('DOMContentLoaded', () => {
       article.className = "tarjeta-obra";
       const estiloEstado = obra.disponible ? 'color: green; font-weight: bold;' : 'color: gray; font-weight: bold;';
 
-      // Sin el atributo target="_blank" para abrir dentro de la misma vista
+      const urlImagen = `${rutaOleo}${obra.archivo}`;
+
       article.innerHTML = `
-        <a href="${rutaOleo}${obra.archivo}" class="lightbox-link" data-pswp-width="1200" data-pswp-height="900">
-          <img src="${rutaOleo}${obra.archivo}" alt="${obra.titulo}" loading="lazy">
+        <a href="${urlImagen}" class="lightbox-link" data-pswp-src="${urlImagen}" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
+          <img src="${urlImagen}" alt="${obra.titulo}" loading="lazy">
         </a>
         <h3>${obra.titulo}</h3>
         <p><strong>Técnica:</strong> Óleo sobre lienzo</p>
         <p><strong>Dimensiones:</strong> ${obra.dimensiones}</p>
         <p><strong>Estado:</strong> <span style="${estiloEstado}">${obra.estado}</span></p>
       `;
-
       contenedorOleo.appendChild(article);
     });
   }
 
-  // 4. Catálogo de Muralismo (8 obras)
+  // 3. Arreglo completo de la categoría Muralismo (8 imágenes)
   const obrasMuralismo = [
     { archivo: "Mural 1.webp", titulo: "Mural 1", dimensiones: "Dimensiones variables", estado: "Colección Privada", disponible: false },
     { archivo: "Mural 2.webp", titulo: "Mural 2", dimensiones: "Dimensiones variables", estado: "Colección Privada", disponible: false },
@@ -98,18 +88,26 @@ document.addEventListener('DOMContentLoaded', () => {
       article.className = "tarjeta-obra";
       const estiloEstado = obra.disponible ? 'color: green; font-weight: bold;' : 'color: gray; font-weight: bold;';
 
-      // Sin el atributo target="_blank" para abrir dentro de la misma vista
+      const urlImagen = `${rutaMuralismo}${encodeURIComponent(obra.archivo)}`;
+
       article.innerHTML = `
-        <a href="${rutaMuralismo}${encodeURIComponent(obra.archivo)}" class="lightbox-link" data-pswp-width="1200" data-pswp-height="900">
-          <img src="${rutaMuralismo}${encodeURIComponent(obra.archivo)}" alt="${obra.titulo}" loading="lazy">
+        <a href="${urlImagen}" class="lightbox-link" data-pswp-src="${urlImagen}" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
+          <img src="${urlImagen}" alt="${obra.titulo}" loading="lazy">
         </a>
         <h3>${obra.titulo}</h3>
         <p><strong>Técnica:</strong> Muralismo / Acrílico</p>
         <p><strong>Dimensiones:</strong> ${obra.dimensiones}</p>
         <p><strong>Estado:</strong> <span style="${estiloEstado}">${obra.estado}</span></p>
       `;
-
       contenedorMuralismo.appendChild(article);
     });
   }
+
+  // 4. Inicializar PhotoSwipe
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '.galeria-grid',
+    children: 'a.lightbox-link',
+    pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe.esm.min.js')
+  });
+  lightbox.init();
 });
