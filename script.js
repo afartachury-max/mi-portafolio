@@ -1,12 +1,12 @@
 import PhotoSwipeLightbox from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe-lightbox.esm.min.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Inicializar PhotoSwipe con transición suave (fade)
+  // 1. Inicializar PhotoSwipe para navegación fluida en la misma página
   const lightbox = new PhotoSwipeLightbox({
-    gallery: '.galeria-grid, .galeria',
+    gallery: '#galeria-oleo, #galeria-muralismo',
     children: 'a.lightbox-link',
     showHideAnimationType: 'fade',
-    bgOpacity: 0.85,
+    bgOpacity: 0.9,
     initialZoomLevel: 'fit',
     secondaryZoomLevel: 2,
     maxZoomLevel: 4,
@@ -22,14 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
     pestana.addEventListener('click', (e) => {
       e.preventDefault();
 
-      // Desactivar pestañas y secciones activas
       pestanas.forEach((p) => p.classList.remove('active'));
       secciones.forEach((s) => s.classList.remove('active'));
 
-      // Activar la pestaña seleccionada
       pestana.classList.add('active');
 
-      // Mostrar la sección correspondiente
       const seccionId = pestana.getAttribute('data-seccion');
       const seccionDestino = document.getElementById(seccionId);
       if (seccionDestino) {
@@ -64,8 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
       article.className = "tarjeta-obra";
       const estiloEstado = obra.disponible ? 'color: green; font-weight: bold;' : 'color: gray; font-weight: bold;';
 
+      // Sin el atributo target="_blank" para abrir dentro de la misma vista
       article.innerHTML = `
-        <a href="${rutaOleo}${obra.archivo}" class="lightbox-link" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
+        <a href="${rutaOleo}${obra.archivo}" class="lightbox-link" data-pswp-width="1200" data-pswp-height="900">
           <img src="${rutaOleo}${obra.archivo}" alt="${obra.titulo}" loading="lazy">
         </a>
         <h3>${obra.titulo}</h3>
@@ -100,8 +98,9 @@ document.addEventListener('DOMContentLoaded', () => {
       article.className = "tarjeta-obra";
       const estiloEstado = obra.disponible ? 'color: green; font-weight: bold;' : 'color: gray; font-weight: bold;';
 
+      // Sin el atributo target="_blank" para abrir dentro de la misma vista
       article.innerHTML = `
-        <a href="${rutaMuralismo}${encodeURIComponent(obra.archivo)}" class="lightbox-link" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
+        <a href="${rutaMuralismo}${encodeURIComponent(obra.archivo)}" class="lightbox-link" data-pswp-width="1200" data-pswp-height="900">
           <img src="${rutaMuralismo}${encodeURIComponent(obra.archivo)}" alt="${obra.titulo}" loading="lazy">
         </a>
         <h3>${obra.titulo}</h3>
