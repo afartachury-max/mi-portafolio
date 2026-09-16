@@ -1,7 +1,20 @@
 import PhotoSwipeLightbox from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe-lightbox.esm.min.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Control de navegación entre pestañas
+  // 1. Inicializar PhotoSwipe con transición suave (fade)
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '.galeria-grid, .galeria',
+    children: 'a.lightbox-link',
+    showHideAnimationType: 'fade',
+    bgOpacity: 0.85,
+    initialZoomLevel: 'fit',
+    secondaryZoomLevel: 2,
+    maxZoomLevel: 4,
+    pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe.esm.min.js')
+  });
+  lightbox.init();
+
+  // 2. Control de navegación entre pestañas
   const pestanas = document.querySelectorAll('.pestana');
   const secciones = document.querySelectorAll('.contenido-seccion');
 
@@ -9,14 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
     pestana.addEventListener('click', (e) => {
       e.preventDefault();
 
-      // Desactivar pestañas y secciones
+      // Desactivar pestañas y secciones activas
       pestanas.forEach((p) => p.classList.remove('active'));
       secciones.forEach((s) => s.classList.remove('active'));
 
-      // Activar pestaña actual
+      // Activar la pestaña seleccionada
       pestana.classList.add('active');
 
-      // Mostrar sección
+      // Mostrar la sección correspondiente
       const seccionId = pestana.getAttribute('data-seccion');
       const seccionDestino = document.getElementById(seccionId);
       if (seccionDestino) {
@@ -25,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 2. Arreglo completo de la categoría Óleo
+  // 3. Catálogo de Óleo (12 obras)
   const obrasOleo = [
     { archivo: "1Frida.webp", titulo: "Serie Frida - Pieza 1", dimensiones: "80 x 60 cm", estado: "Colección Privada", disponible: false },
     { archivo: "2Frida.webp", titulo: "Serie Frida - Pieza 2", dimensiones: "100 x 70 cm", estado: "Colección Privada", disponible: false },
@@ -60,11 +73,12 @@ document.addEventListener('DOMContentLoaded', () => {
         <p><strong>Dimensiones:</strong> ${obra.dimensiones}</p>
         <p><strong>Estado:</strong> <span style="${estiloEstado}">${obra.estado}</span></p>
       `;
+
       contenedorOleo.appendChild(article);
     });
   }
 
-  // 3. Arreglo completo de la categoría Muralismo (8 imágenes)
+  // 4. Catálogo de Muralismo (8 obras)
   const obrasMuralismo = [
     { archivo: "Mural 1.webp", titulo: "Mural 1", dimensiones: "Dimensiones variables", estado: "Colección Privada", disponible: false },
     { archivo: "Mural 2.webp", titulo: "Mural 2", dimensiones: "Dimensiones variables", estado: "Colección Privada", disponible: false },
@@ -95,18 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <p><strong>Dimensiones:</strong> ${obra.dimensiones}</p>
         <p><strong>Estado:</strong> <span style="${estiloEstado}">${obra.estado}</span></p>
       `;
+
       contenedorMuralismo.appendChild(article);
     });
   }
-
-  // 4. Inicializar PhotoSwipe
-  const lightbox = new PhotoSwipeLightbox({
-    gallery: '.galeria-grid',
-    children: 'a.lightbox-link',
-    initialZoomLevel: 'fit',
-    secondaryZoomLevel: 2,
-    maxZoomLevel: 4,
-    pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe.esm.min.js')
-  });
-  lightbox.init();
 });
