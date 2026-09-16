@@ -35,4 +35,33 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 3. Cargar dinámicamente las imágenes de la carpeta Oleo
+  const imagenesOleo = [
+    "3NYD.webp",
+    "4NYD.webp",
+    "5STG.webp",
+    "6STG.webp",
+    "7RD.webp",
+    "8RD.webp",
+    "9RD.webp",
+    "10RD.webp",
+    "11SG.webp",
+    "12AZ.webp"
+  ];
+
+  const rutaCarpeta = "./1Oleo/";
+  const contenedorGaleria = document.getElementById("galeria-oleo");
+
+  if (contenedorGaleria) {
+    contenedorGaleria.innerHTML = ""; // Evita duplicados
+
+    imagenesOleo.forEach((nombreImagen) => {
+      const img = document.createElement("img");
+      img.src = `${rutaCarpeta}${nombreImagen}`;
+      img.alt = `Obra al óleo: ${nombreImagen.split('.')[0]}`;
+      img.loading = "lazy";
+      contenedorGaleria.appendChild(img);
+    });
+  }
 });
