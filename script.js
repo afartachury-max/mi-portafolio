@@ -1,18 +1,7 @@
 import PhotoSwipeLightbox from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe-lightbox.esm.min.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Inicializar PhotoSwipe
-  const lightbox = new PhotoSwipeLightbox({
-    gallery: '.galeria, .galeria-grid',
-    children: 'a.lightbox-link',
-    initialZoomLevel: 'fit',
-    secondaryZoomLevel: 2,
-    maxZoomLevel: 4,
-    pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe.esm.min.js')
-  });
-  lightbox.init();
-
-  // 2. Control de navegación entre pestañas
+  // 1. Control de navegación entre pestañas
   const pestanas = document.querySelectorAll('.pestana');
   const secciones = document.querySelectorAll('.contenido-seccion');
 
@@ -36,20 +25,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 3. Arreglo completo con todas las obras al óleo
+  // 2. Arreglo completo con todas las obras al óleo
   const obrasOleo = [
-    { archivo: "1Frida.webp", titulo: "Alma de Frida - Pieza 1", dimensiones: "160 x 90 cm", estado: "Colección Privada", disponible: true },
-    { archivo: "2Frida.webp", titulo: "Alma de Frida - Pieza 1", dimensiones: "160 x 90cm", estado: "Colección Privada", disponible: false },
-    { archivo: "3NYD.webp", titulo: "Movimiento que respira - Pieza 3", dimensiones: "340 x 110 cm", estado: "Disponible", disponible: false },
-    { archivo: "4NYD.webp", titulo: "Movimiento que respira - Pieza 4", dimensiones: "340 x 110 cm", estado: "Disponible", disponible: false  },
-    { archivo: "5STG.webp", titulo: "Fusion en NY - Pieza 5", dimensiones: "70 x 50 cm", estado: Colección Privad", disponible: false  },
-    { archivo: "6STG.webp", titulo: "Fusion en NY - Pieza 5", dimensiones: "70 x 50 cm", estado: "Colección Privad", disponible: false  },
-    { archivo: "7RD.webp", titulo: "Pausa dorada - Pieza 6", dimensiones: "160 x 100 cm", estado: "Colección Privad", disponible: false  },
-    { archivo: "8RD.webp", titulo: "Pausa dorada - Pieza 6", dimensiones: "160 x 100  cm", estado: "Colección Privad", disponible: false },
-    { archivo: "9RD.webp", titulo: "Aleteo inmovil - Pieza 9", dimensiones: "160 x 100  cm", estado: "Colección Privad", disponible: false  },
-    { archivo: "10RD.webp", titulo: "Aleteo inmovil - Pieza 9", dimensiones: "160 x 100  cm", estado: "Colección Privad", disponible: false },
-    { archivo: "11SG.webp", titulo: "Color del amor - Pieza 10", dimensiones: "90 x 70 cm", estado: "Colección Privad", disponible: false  },
-    { archivo: "12AZ.webp", titulo: "Retrato bajo pedido - Pieza 11", dimensiones: "90 x 60 cm", estado: "Colección Privad", disponible: false  }
+    { archivo: "1Frida.webp", titulo: "Serie Frida - Pieza 1", dimensiones: "80 x 60 cm", estado: "Colección Privada", disponible: false },
+    { archivo: "2Frida.webp", titulo: "Serie Frida - Pieza 2", dimensiones: "100 x 70 cm", estado: "Colección Privada", disponible: false },
+    { archivo: "3NYD.webp", titulo: "Serie NYD - Pieza 3", dimensiones: "60 x 50 cm", estado: "Colección Privada", disponible: false },
+    { archivo: "4NYD.webp", titulo: "Serie NYD - Pieza 4", dimensiones: "60 x 50 cm", estado: "Colección Privada", disponible: false },
+    { archivo: "5STG.webp", titulo: "Serie STG - Pieza 5", dimensiones: "70 x 50 cm", estado: "Colección Privada", disponible: false },
+    { archivo: "6STG.webp", titulo: "Serie STG - Pieza 6", dimensiones: "70 x 50 cm", estado: "Colección Privada", disponible: false },
+    { archivo: "7RD.webp", titulo: "Serie RD - Pieza 7", dimensiones: "80 x 60 cm", estado: "Colección Privada", disponible: false },
+    { archivo: "8RD.webp", titulo: "Serie RD - Pieza 8", dimensiones: "80 x 60 cm", estado: "Colección Privada", disponible: false },
+    { archivo: "9RD.webp", titulo: "Serie RD - Pieza 9", dimensiones: "80 x 60 cm", estado: "Colección Privada", disponible: false },
+    { archivo: "10RD.webp", titulo: "Serie RD - Pieza 10", dimensiones: "80 x 60 cm", estado: "Colección Privada", disponible: false },
+    { archivo: "11SG.webp", titulo: "Serie SG - Pieza 11", dimensiones: "90 x 70 cm", estado: "Colección Privada", disponible: false },
+    { archivo: "12AZ.webp", titulo: "Serie AZ - Pieza 12", dimensiones: "100 x 80 cm", estado: "Colección Privada", disponible: false }
   ];
 
   const rutaCarpeta = "./1Oleo/";
@@ -79,4 +68,15 @@ document.addEventListener('DOMContentLoaded', () => {
       contenedorGaleria.appendChild(article);
     });
   }
+
+  // 3. Inicializar PhotoSwipe DESPUÉS de haber generado las imágenes en el DOM
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '#galeria-oleo, .galeria, .galeria-grid',
+    children: 'a.lightbox-link',
+    initialZoomLevel: 'fit',
+    secondaryZoomLevel: 2,
+    maxZoomLevel: 4,
+    pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe.esm.min.js')
+  });
+  lightbox.init();
 });
