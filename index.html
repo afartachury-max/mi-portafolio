@@ -3,91 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flavio Achury | Portafolio de Arte</title>
-  
-  <!-- Estilos principales -->
+  <title>Flavio Achury - Portafolio</title>
   <link rel="stylesheet" href="style.css">
-  
-  <!-- Estilos de PhotoSwipe (Visor Lightbox / Zoom) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe.min.css">
 </head>
 <body>
 
-<header>
-    <h1>Flavio Achury</h1>
-    <p class="subtitulo">Portafolio Artístico</p>
-
-    <!-- Enlaces directos a contacto y redes -->
-    <div class="redes-contacto">
-      <a href="https://wa.me/573247836386" target="_blank" class="enlace-contacto">WhatsApp</a>
-      <a href="https://instagram.com/af.achury" target="_blank" class="enlace-contacto">Instagram</a>
-      <a href="mailto:afart.achury@gmail.com" class="enlace-contacto">Correo</a>
+  <!-- Encabezado y Navegación -->
+  <header class="header-principal">
+    <div class="logo-titulo">
+      <h1>Flavio Achury</h1>
+      <p class="subtitulo">Portafolio de Arte</p>
     </div>
+    <nav class="nav-principal">
+      <ul>
+        <li><a href="#galeria-oleo" class="nav-link active">Óleo</a></li>
+        <li><a href="#galeria-mural" class="nav-link">Muralismo</a></li>
+        <li><a href="#galeria-camisas" class="nav-link">Camisas</a></li>
+        <li><a href="#galeria-retratos" class="nav-link">Retratos</a></li>
+        <li><a href="#sobre-el-artista" class="nav-link">Sobre el artista</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav class="menu-pestanas">
-    <a href="#oleo" class="pestana active" data-seccion="oleo">Óleo</a>
-    <a href="#acrilico" class="pestana" data-seccion="acrilico">Acrílico</a>
-    <a href="#retratos-grafito" class="pestana" data-seccion="retratos-grafito">Retratos Grafito</a>
-    <a href="#camisas" class="pestana" data-seccion="camisas">Camisas</a>
-    <a href="#muralismo" class="pestana" data-seccion="muralismo">Muralismo</a>
-    <a href="#sobre-artista" class="pestana" data-seccion="sobre-artista">Sobre el artista</a>
-  </nav>
-
-  <main>
-    <!-- Sección 1: Óleo -->
-    <section id="oleo" class="contenido-seccion active">
+  <main class="contenedor-principal">
+    <!-- 1. Sección Óleo -->
+    <section id="galeria-oleo" class="seccion-contenido activa">
       <h2>Pintura al Óleo</h2>
-      <div id="galeria-oleo" class="galeria-grid"></div>
+      <div id="contenedor-oleo" class="galeria-grid"></div>
     </section>
 
-    <!-- Sección 2: Acrílico -->
-    <section id="acrilico" class="contenido-seccion">
-      <h2>Pintura en Acrílico</h2>
-      <div class="galeria">
-        <div class="tarjeta">
-          <a href="imagenes/tu_obra_2.jpg" class="lightbox-link" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
-            <img src="imagenes/tu_obra_2.jpg" alt="Obra en acrílico">
-          </a>
-          <h3>Nombre de la Obra</h3>
-          <p>Técnica: Acrílico sobre madera.</p>
+    <!-- 2. Sección Muralismo -->
+    <section id="galeria-mural" class="seccion-contenido">
+      <h2>Muralismo</h2>
+      <div id="contenedor-mural" class="galeria-grid"></div>
+    </section>
+
+    <!-- 3. Sección Camisas -->
+    <section id="galeria-camisas" class="seccion-contenido">
+      <h2>Camisas / Decoloración</h2>
+      <div id="contenedor-camisas" class="galeria-grid"></div>
+    </section>
+
+    <!-- 4. Sección Retratos -->
+    <section id="galeria-retratos" class="seccion-contenido">
+      <h2>Retratos en Grafito</h2>
+      <div id="contenedor-retratos" class="galeria-grid"></div>
+    </section>
+
+    <!-- 5. Sección Sobre el artista -->
+    <section id="sobre-el-artista" class="seccion-contenido">
+      <h2>Sobre el Artista</h2>
+      <div class="perfil-contenedor">
+        <div class="perfil-tarjeta">
+          <img src="./perfil/perfil2l.jpg" alt="Foto de Flavio Achury" class="foto-perfil" loading="lazy">
+          <div class="biografia">
+            <p>Apasionado por la forma, el color y la riqueza de los detalles, entiendo el arte como un proceso de constante aprendizaje y evolución. En cada técnica desde el lápiz, el óleo, el acrílico, el dibujo en grafito, decoloración con hipoclorito y el muralismo, me dedico a explorar la expresión visual con dinamismo y precisión, buscando conectar emociones a través de la luz y la materia. La diferencia entre algo bueno y excelente es el tiempo extra.</p>
+          </div>
         </div>
       </div>
     </section>
-
-    <!-- Sección: Retratos Grafito -->
-    <section id="retratos-grafito" class="contenido-seccion">
-      <h2>Retratos Grafito</h2>
-      <div id="galeria-retratos-grafito" class="galeria-grid"></div>
-    </section>
-
-    <!-- Sección 3: Camisas -->
-    <section id="camisas" class="contenido-seccion">
-      <h2>Camisas</h2>
-      <div id="galeria-camisas" class="galeria-grid"></div>
-    </section>
-
-  <!-- Sección Muralismo -->
-<section id="muralismo" class="seccion-galeria">
-  <h2>Muralismo</h2>
-  <div id="galeria-mural" class="galeria-grid"></div>
-</section>
-<!-- Sección 5: Sobre el artista -->
-<section id="sobre-el-artista" class="contenido-seccion">
-  <h2>Sobre el artista</h2>
-  <div class="perfil-contenedor">
-    <img src="./perfil/perfil.jpg" alt="Foto de Flavio Achury" class="foto-perfil">
-    <div class="biografia">
-      <p>Apasionado por la forma, el color y la riqueza de los detalles, entiendo el arte como un proceso de constante aprendizaje y evolución. En cada técnica desde el lapiz, el óleo, el acrílico, el dibujo en grafito, decoloracion con hipoclorito y el muralismo, me dedico a explorar la expresión visual con dinamismo y precisión, buscando conectar emociones a través de la luz y la materia. La diferencia entre algo bueno y excelente es el tiempo extra.</p>
-    </div>
-  </div>
-</section>
   </main>
 
   <footer>
-    <p>Contacto: afart.achury@gmail.com | Redes sociales: @af.achury</p>
+    <p>&copy; Flavio Achury - Todos los derechos reservados</p>
   </footer>
 
-  <script type="module" src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
