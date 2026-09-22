@@ -45,15 +45,15 @@ if (contenedorOleo) {
 // 2. Categoría Retratos Grafito
 // ==========================================
 const obrasRetratosGrafito = [
-  { archivo: "grafito1.jpg", titulo: "Retrato 1" },
-  { archivo: "grafito2.jpg", titulo: "Retrato 2" },
-  { archivo: "grafito3.jpg", titulo: "Retrato 3" },
-  { archivo: "grafito4.jpg", titulo: "Retrato 4" },
-  { archivo: "grafito5.jpg", titulo: "Retrato 5" },
-  { archivo: "grafito6.jpg", titulo: "Retrato 6" },
-  { archivo: "grafito7.jpg", titulo: "Retrato 7" },
-  { archivo: "grafito8.jpg", titulo: "Retrato 8" },
-  { archivo: "grafito9.jpg", titulo: "Retrato 9" }
+  { archivo: "grafito1.webp", titulo: "Retrato 1" },
+  { archivo: "grafito2.webp", titulo: "Retrato 2" },
+  { archivo: "grafito3.webp", titulo: "Retrato 3" },
+  { archivo: "grafito4.webp", titulo: "Retrato 4" },
+  { archivo: "grafito5.webp", titulo: "Retrato 5" },
+  { archivo: "grafito6.webp", titulo: "Retrato 6" },
+  { archivo: "grafito7.webp", titulo: "Retrato 7" },
+  { archivo: "grafito8.webp", titulo: "Retrato 8" },
+  { archivo: "grafito9.webp", titulo: "Retrato 9" }
 ];
 
 const rutaRetratosGrafito = "./retratos-grafito/";
