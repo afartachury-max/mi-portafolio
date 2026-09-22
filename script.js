@@ -1,18 +1,21 @@
 // ==========================================
 // 1. Categoría Óleo
 // ==========================================
+// ==========================================
+// 1. Categoría Óleo
+// ==========================================
 const obrasOleo = [
-  { archivo: "1sg.webp", titulo: "Serie SG - Pieza 1" },
-  { archivo: "2sg.webp", titulo: "Serie SG - Pieza 2" },
-  { archivo: "3sg.webp", titulo: "Serie SG - Pieza 3" },
-  { archivo: "4sg.webp", titulo: "Serie SG - Pieza 4" },
-  { archivo: "5sg.webp", titulo: "Serie SG - Pieza 5" },
-  { archivo: "6sg.webp", titulo: "Serie SG - Pieza 6" },
-  { archivo: "7sg.webp", titulo: "Serie SG - Pieza 7" },
-  { archivo: "8sg.webp", titulo: "Serie SG - Pieza 8" },
-  { archivo: "9sg.webp", titulo: "Serie SG - Pieza 9" },
-  { archivo: "10sg.webp", titulo: "Serie SG - Pieza 10" },
-  { archivo: "11sg.webp", titulo: "Serie SG - Pieza 11" },
+  { archivo: "1Frida.webp", titulo: "Frida 1" },
+  { archivo: "2Frida.webp", titulo: "Frida 2" },
+  { archivo: "3NYD.webp", titulo: "Obra 3 NYD" },
+  { archivo: "4NYD.webp", titulo: "Obra 4 NYD" },
+  { archivo: "5STG.webp", titulo: "Obra 5 STG" },
+  { archivo: "6STG.webp", titulo: "Obra 6 STG" },
+  { archivo: "7RD.webp", titulo: "Obra 7 RD" },
+  { archivo: "8RD.webp", titulo: "Obra 8 RD" },
+  { archivo: "9RD.webp", titulo: "Obra 9 RD" },
+  { archivo: "10RD.webp", titulo: "Obra 10 RD" },
+  { archivo: "11SG.webp", titulo: "Serie SG - Pieza 11" },
   { archivo: "12AZ.webp", titulo: "Serie AZ - Pieza 12" },
   { archivo: "13RB.webp", titulo: "Serie RB - Robot" }
 ];
