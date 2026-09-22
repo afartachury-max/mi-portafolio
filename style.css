@@ -182,3 +182,29 @@ footer {
   line-height: 1.7;
   color: #222222;
 }
+/* Botones de redes y contacto */
+.redes-contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.enlace-contacto {
+  color: #ffffff !important;               /* Fuerza que el texto sea blanco */
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo suave para dar contraste */
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.enlace-contacto:hover {
+  color: #ffffff !important;               /* Mantiene el texto blanco al pasar el cursor */
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
