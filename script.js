@@ -38,8 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
     { archivo: "9RD.webp", titulo: "Serie RD - Pieza 9", dimensiones: "80 x 60 cm", estado: "Colección Privada", disponible: false },
     { archivo: "10RD.webp", titulo: "Serie RD - Pieza 10", dimensiones: "80 x 60 cm", estado: "Colección Privada", disponible: false },
     { archivo: "11SG.webp", titulo: "Serie SG - Pieza 11", dimensiones: "90 x 70 cm", estado: "Colección Privada", disponible: false },
-    { archivo: "12AZ.webp", titulo: "Serie AZ - Pieza 12", dimensiones: "100 x 80 cm", estado: "Colección Privada", disponible: false }
-  ];
+  { archivo: "12AZ.webp", titulo: "Serie AZ - Pieza 12", dimensiones: "100 x 80 cm", estado: "Colección Privada", disponible: false },
+  { archivo: "13RB.webp", titulo: "Serie rb - robot", dimensiones: "190 x 90 cm", estado: "Colección Privada", disponible: false }
+];
 
   const rutaOleo = "./1Oleo/";
   const contenedorOleo = document.getElementById("galeria-oleo");
