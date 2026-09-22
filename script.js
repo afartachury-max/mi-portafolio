@@ -114,7 +114,6 @@ if (contenedorCamisas) {
     contenedorCamisas.appendChild(article);
   });
 }
-
 // ==========================================
 // 4. Categoría Muralismo
 // ==========================================
@@ -130,7 +129,7 @@ const obrasMuralismo = [
 ];
 
 const rutaMuralismo = "./mural/";
-const contenedorMuralismo = document.getElementById("galeria-muralismo");
+const contenedorMuralismo = document.getElementById("galeria-mural");
 
 if (contenedorMuralismo) {
   contenedorMuralismo.innerHTML = "";
@@ -148,7 +147,6 @@ if (contenedorMuralismo) {
     contenedorMuralismo.appendChild(article);
   });
 }
-
 // ==========================================
 // 5. Navegación por pestañas
 // ==========================================
