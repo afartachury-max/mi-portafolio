@@ -122,6 +122,15 @@ header {
   color: #000;
   border-bottom-color: #000;
 }
+/* Indicar visualmente que las fotos son clickeables */
+.tarjeta-obra img {
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-obra img:hover {
+  transform: scale(1.02);
+}
 .enlace-contacto:hover {
   color: #ffffff !important;               /* Mantiene el texto blanco al pasar el cursor */
   background-color: rgba(255, 255, 255, 0.4);
