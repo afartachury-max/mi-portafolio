@@ -39,7 +39,39 @@ if (contenedorOleo) {
 
 
 // ==========================================
-// 2. Categoría Retratos Grafito
+// 2. Categoría Acrílico
+// ==========================================
+const obrasAcrilico = [
+  // Agrega aquí los objetos de tus imágenes en acrílico cuando subas la carpeta
+];
+
+const rutaAcrilico = "./2Acrilico/";
+const contenedorAcrilico = document.getElementById("galeria-acrilico");
+
+if (contenedorAcrilico) {
+  contenedorAcrilico.innerHTML = "";
+  if (obrasAcrilico.length === 0) {
+    contenedorAcrilico.innerHTML = "<p>Próximamente más obras en acrílico.</p>";
+  } else {
+    obrasAcrilico.forEach((obra) => {
+      const article = document.createElement("article");
+      article.className = "tarjeta-obra";
+      const urlImagen = `${rutaAcrilico}${obra.archivo}`;
+      article.innerHTML = `
+        <a href="${urlImagen}" class="lightbox-link" data-pswp-src="${urlImagen}" data-pswp-width="1920" data-pswp-height="1080">
+          <img src="${urlImagen}" alt="${obra.titulo}" loading="lazy">
+        </a>
+        <h3>${obra.titulo}</h3>
+        <p><strong>Técnica:</strong> Acrílico sobre lienzo</p>
+      `;
+      contenedorAcrilico.appendChild(article);
+    });
+  }
+}
+
+
+// ==========================================
+// 3. Categoría Retratos Grafito
 // ==========================================
 const obrasRetratosGrafito = [
   { archivo: "grafito1.webp", titulo: "Retrato 1" },
@@ -76,7 +108,7 @@ if (contenedorRetratosGrafito) {
 
 
 // ==========================================
-// 3. Categoría Camisas
+// 4. Categoría Camisas
 // ==========================================
 const obrasCamisas = [
   { archivo: "camisa1.webp", titulo: "Camisa 1" },
@@ -115,7 +147,7 @@ if (contenedorCamisas) {
 
 
 // ==========================================
-// 4. Categoría Muralismo
+// 5. Categoría Muralismo
 // ==========================================
 const obrasMuralismo = [
   { archivo: "mural-1.webp", titulo: "Mural 1" },
@@ -150,7 +182,7 @@ if (contenedorMuralismo) {
 
 
 // ==========================================
-// 5. Navegación por Pestañas
+// 6. Navegación por Pestañas
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
   const pestanas = document.querySelectorAll(".pestana");
@@ -160,18 +192,23 @@ document.addEventListener("DOMContentLoaded", () => {
     pestana.addEventListener("click", (e) => {
       e.preventDefault();
 
-      // Quitar estado activo de todas las pestañas y secciones
+      // Desactivar todas las pestañas y secciones
       pestanas.forEach((p) => p.classList.remove("active"));
       secciones.forEach((s) => s.classList.remove("active"));
 
-      // Activar la pestaña cliqueada
+      // Activar la pestaña clickeada
       pestana.classList.add("active");
 
-      // Buscar la sección correspondiente mediante data-seccion
+      // Buscar la sección correspondiente por data-seccion
       const idSeccion = pestana.getAttribute("data-seccion");
       const seccionObjetivo = document.getElementById(idSeccion);
 
       if (seccionObjetivo) {
+        seccionObjetivo.classList.add("active");
+      }
+    });
+  });
+});
         seccionObjetivo.classList.add("active");
       }
     });
