@@ -119,17 +119,17 @@ if (contenedorCamisas) {
 // 4. Categoría Muralismo
 // ==========================================
 const obrasMuralismo = [
-  { archivo: "Mural 1.webp", titulo: "Mural 1" },
-  { archivo: "Mural 2.webp", titulo: "Mural 2" },
-  { archivo: "Mural 3.webp", titulo: "Mural 3" },
-  { archivo: "Mural 4.webp", titulo: "Mural 4" },
-  { archivo: "Mural 5.webp", titulo: "Mural 5" },
-  { archivo: "Mural 6.webp", titulo: "Mural 6" },
-  { archivo: "Mural 7.webp", titulo: "Mural 7" },
-  { archivo: "Mural 8.webp", titulo: "Mural 8" }
+  { archivo: "mural-1.webp", titulo: "Mural 1" },
+  { archivo: "mural-2.webp", titulo: "Mural 2" },
+  { archivo: "mural-3.webp", titulo: "Mural 3" },
+  { archivo: "mural-4.webp", titulo: "Mural 4" },
+  { archivo: "mural-5.webp", titulo: "Mural 5" },
+  { archivo: "mural-6.webp", titulo: "Mural 6" },
+  { archivo: "mural-7.webp", titulo: "Mural 7" },
+  { archivo: "mural-8.webp", titulo: "Mural 8" }
 ];
 
-const rutaMuralismo = "./5 Muralismo/";
+const rutaMuralismo = "./mural/";
 const contenedorMuralismo = document.getElementById("galeria-muralismo");
 
 if (contenedorMuralismo) {
@@ -137,15 +137,13 @@ if (contenedorMuralismo) {
   obrasMuralismo.forEach((obra) => {
     const article = document.createElement("article");
     article.className = "tarjeta-obra";
-    const urlImagen = `${rutaMuralismo}${encodeURIComponent(obra.archivo)}`;
-
+    const urlImagen = `${rutaMuralismo}${obra.archivo}`;
     article.innerHTML = `
       <a href="${urlImagen}" class="lightbox-link" data-pswp-src="${urlImagen}" data-pswp-width="1920" data-pswp-height="1080">
         <img src="${urlImagen}" alt="${obra.titulo}" loading="lazy">
       </a>
       <h3>${obra.titulo}</h3>
-      <p><strong>Técnica:</strong> Muralismo / Acrílico</p>
-      <p><strong>Estado:</strong> <span style="color: gray; font-weight: bold;">Colección personal</span></p>
+      <p><strong>Técnica:</strong> Muralismo / Pintura en pared</p>
     `;
     contenedorMuralismo.appendChild(article);
   });
