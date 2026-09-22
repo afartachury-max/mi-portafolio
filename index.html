@@ -1,41 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flavio Achury - Portafolio Artístico</title>
+  <title>Flavio Achury | Portafolio de Arte</title>
+  
+  <!-- Estilos principales -->
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Estilos de PhotoSwipe (Visor Lightbox / Zoom) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe.min.css">
 </head>
 <body>
 
-  <!-- Sección de Presentación / Perfil -->
-  <section id="presentacion" class="card-container">
-    <img src="perfil/perfil2.webp" alt="Foto de perfil" class="profile-img">
+  <header>
     <h1>Flavio Achury</h1>
-    <p class="bio">Artista Plástico & Muralista</p>
-    <div class="links-grid">
-      <a href="https://wa.me/573247836386?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20tus%20obras" target="_blank" class="btn btn-whatsapp">WhatsApp Business</a>
-      <a href="https://instagram.com/af.achury" target="_blank" class="btn btn-instagram">Instagram</a>
-      <a href="mailto:afart.achury@gmail.com" class="btn btn-email">Correo Electrónico</a>
-      <a href="#oleo" class="btn btn-portfolio">Ver Mi Portafolio</a>
-    </div>
-  </section>
-
-  <header style="text-align: center; padding: 20px;">
-    <h1>Mi Portafolio Artístico</h1>
-    <p>Explora mis facetas y técnicas creativas</p>
+    <p class="subtitulo">Portafolio Artístico</p>
   </header>
 
-<nav class="categorias">
-  <a href="#oleo" class="pestana active" data-seccion="oleo">Óleo</a>
-  <a href="#acrilico" class="pestana" data-seccion="acrilico">Acrílico</a>
-  <a href="#retratos-grafito" class="pestana" data-seccion="retratos-grafito">Retratos Grafito</a>
-  <a href="#camisas" class="pestana" data-seccion="camisas">Camisas</a>
-  <a href="#muralismo" class="pestana" data-seccion="muralismo">Muralismo</a>
-  <a href="#sobre-artista" class="pestana" data-seccion="sobre-artista">Sobre el artista</a>
-</nav>
+  <nav class="menu-pestanas">
+    <a href="#oleo" class="pestana active" data-seccion="oleo">Óleo</a>
+    <a href="#acrilico" class="pestana" data-seccion="acrilico">Acrílico</a>
+    <a href="#retratos-grafito" class="pestana" data-seccion="retratos-grafito">Retratos Grafito</a>
+    <a href="#camisas" class="pestana" data-seccion="camisas">Camisas</a>
+    <a href="#muralismo" class="pestana" data-seccion="muralismo">Muralismo</a>
+    <a href="#sobre-artista" class="pestana" data-seccion="sobre-artista">Sobre el artista</a>
+  </nav>
 
   <main>
     <!-- Sección 1: Óleo -->
@@ -57,95 +47,18 @@
         </div>
       </div>
     </section>
-<!-- Sección: Retratos Grafito -->
-<section id="retratos-grafito" class="contenido-seccion">
-  <h2>Retratos Grafito</h2>
-<div id="galeria-retratos-grafito" class="galeria-grid"></div>
-</section>
- <!-- Sección 3: Camisas -->
-<section id="camisas" class="contenido-seccion">
-    <h2>Camisas</h2>
-    <div class="galeria-grid">
 
-        <article class="tarjeta-obra">
-            <img src="./camisas/camisa1.webp" alt="Camisa 1">
-            <h3>Diseño Camisa 1</h3>
-            <p><strong>Técnica:</strong> Decoloración </p>
-            <p><strong>Estado:</strong> coleccion privada</p>
-        </article>
+    <!-- Sección: Retratos Grafito -->
+    <section id="retratos-grafito" class="contenido-seccion">
+      <h2>Retratos Grafito</h2>
+      <div id="galeria-retratos-grafito" class="galeria-grid"></div>
+    </section>
 
-        <article class="tarjeta-obra">
-            <img src="./camisas/camisa2.webp" alt="Camisa 2">
-            <h3>Diseño Camisa 2</h3>
-            <p><strong>Técnica:</strong> Decoloración</p>
-            <p><strong>Estado:</strong> coleccion privada</p>
-        </article>
-
-        <article class="tarjeta-obra">
-            <img src="./camisas/camisa3.webp" alt="Camisa 3">
-            <h3>Diseño Camisa 3</h3>
-            <p><strong>Técnica:</strong> Decoloración </p>
-            <p><strong>Estado:</strong>coleccion privada</p>
-        </article>
-
-        <article class="tarjeta-obra">
-            <img src="./camisas/camisa4.webp" alt="Camisa 4">
-            <h3>Diseño Camisa 4</h3>
-            <p><strong>Técnica:</strong> Decoloracióm </p>
-            <p><strong>Estado:</strong> coleccion privada</p>
-        </article>
-
-        <article class="tarjeta-obra">
-            <img src="./camisas/Camisa5.webp" alt="Camisa 5">
-            <h3>Diseño Camisa 5</h3>
-            <p><strong>Técnica:</strong> Decoloración</p>
-            <p><strong>Estado:</strong> Vendida</p>
-        </article>
-
-        <article class="tarjeta-obra">
-            <img src="./camisas/Camisa6.webp" alt="Camisa 6">
-            <h3>Diseño Camisa 6</h3>
-            <p><strong>Técnica:</strong> Decoloración</p>
-            <p><strong>Estado:</strong> Vendida</p>
-        </article>
-
-        <article class="tarjeta-obra">
-            <img src="./camisas/Camisa7.webp" alt="Camisa 7">
-            <h3>Diseño Camisa 7</h3>
-            <p><strong>Técnica:</strong> Decoloración</p>
-            <p><strong>Estado:</strong> Vendida</p>
-        </article>
-
-        <article class="tarjeta-obra">
-            <img src="./camisas/Camisa8.webp" alt="Camisa 8">
-            <h3>Diseño Camisa 8</h3>
-            <p><strong>Técnica:</strong> Decoloración</p>
-            <p><strong>Estado:</strong> Vendida</p>
-        </article>
-
-        <article class="tarjeta-obra">
-            <img src="./camisas/Camisa9.webp" alt="Camisa 9">
-            <h3>Diseño Camisa 9</h3>
-            <p><strong>Técnica:</strong> Decoloración</p>
-            <p><strong>Estado:</strong> Vendida</p>
-        </article>
-
-        <article class="tarjeta-obra">
-            <img src="./camisas/Camisa10.webp" alt="Camisa 10">
-            <h3>Diseño Camisa 10</h3>
-            <p><strong>Técnica:</strong> Decoloración</p>
-            <p><strong>Estado:</strong> Vendida</p>
-        </article>
-
-        <article class="tarjeta-obra">
-            <img src="./camisas/Camisa11.webp" alt="Camisa 11">
-            <h3>Diseño Camisa 11</h3>
-            <p><strong>Técnica:</strong> Decoloración</p>
-            <p><strong>Estado:</strong> Vendida</p>
-        </article>
-
-    </div>
-</section>
+    <!-- Sección 3: Camisas -->
+    <section id="camisas" class="contenido-seccion">
+      <h2>Camisas</h2>
+      <div id="galeria-camisas" class="galeria-grid"></div>
+    </section>
 
     <!-- Sección 4: Muralismo -->
     <section id="muralismo" class="contenido-seccion">
@@ -153,16 +66,16 @@
       <div id="galeria-muralismo" class="galeria-grid"></div>
     </section>
 
-   <!-- Sección 5: Sobre el artista -->
-  <section id="sobre-artista" class="contenido-seccion">
-    <h2>Sobre el artista</h2>
-    <div class="perfil-contenedor">
-      <img src="./perfil/perfil2.webp" alt="Foto de Flavio Achury" class="foto-perfil">
-      <div class="biografia">
-        <p>Apasionado por la forma, el color y la riqueza de los detalles, entiendo el arte como un proceso de constante aprendizaje y evolución. En cada técnica desde el lapiz, el óleo, el acrílico, el dibujo en grafito, decoloracion con hipoclorito y el muralismo, me dedico a explorar la expresión visual con dinamismo y precisión, buscando conectar emociones a través de la luz y la materia.  La diferencia entre algo bueno y excelente es el tiempo extra.</p>
+    <!-- Sección 5: Sobre el artista -->
+    <section id="sobre-artista" class="contenido-seccion">
+      <h2>Sobre el artista</h2>
+      <div class="perfil-contenedor">
+        <img src="./perfil/perfil2.webp" alt="Foto de Flavio Achury" class="foto-perfil">
+        <div class="biografia">
+          <p>Apasionado por la forma, el color y la riqueza de los detalles, entiendo el arte como un proceso de constante aprendizaje y evolución. En cada técnica desde el lapiz, el óleo, el acrílico, el dibujo en grafito, decoloracion con hipoclorito y el muralismo, me dedico a explorar la expresión visual con dinamismo y precisión, buscando conectar emociones a través de la luz y la materia. La diferencia entre algo bueno y excelente es el tiempo extra.</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
   </main>
 
   <footer>
