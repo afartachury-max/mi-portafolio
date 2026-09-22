@@ -2,19 +2,19 @@
 // 1. Categoría Óleo
 // ==========================================
 const obrasOleo = [
-  { archivo: "1sg.webp", titulo: "Serie SG - Pieza 1", dimensiones: "100 x 80 cm", estado: "Colección Privada", disponible: false },
-  { archivo: "2sg.webp", titulo: "Serie SG - Pieza 2", dimensiones: "120 x 90 cm", estado: "Disponible", disponible: true },
-  { archivo: "3sg.webp", titulo: "Serie SG - Pieza 3", dimensiones: "80 x 60 cm", estado: "Colección Privada", disponible: false },
-  { archivo: "4sg.webp", titulo: "Serie SG - Pieza 4", dimensiones: "100 x 100 cm", estado: "Disponible", disponible: true },
-  { archivo: "5sg.webp", titulo: "Serie SG - Pieza 5", dimensiones: "150 x 100 cm", estado: "Colección Privada", disponible: false },
-  { archivo: "6sg.webp", titulo: "Serie SG - Pieza 6", dimensiones: "70 x 50 cm", estado: "Disponible", disponible: true },
-  { archivo: "7sg.webp", titulo: "Serie SG - Pieza 7", dimensiones: "110 x 85 cm", estado: "Colección Privada", disponible: false },
-  { archivo: "8sg.webp", titulo: "Serie SG - Pieza 8", dimensiones: "90 x 90 cm", estado: "Disponible", disponible: true },
-  { archivo: "9sg.webp", titulo: "Serie SG - Pieza 9", dimensiones: "130 x 95 cm", estado: "Colección Privada", disponible: false },
-  { archivo: "10sg.webp", titulo: "Serie SG - Pieza 10", dimensiones: "100 x 80 cm", estado: "Disponible", disponible: true },
-  { archivo: "11sg.webp", titulo: "Serie SG - Pieza 11", dimensiones: "90 x 70 cm", estado: "Colección Privada", disponible: false },
-  { archivo: "12AZ.webp", titulo: "Serie AZ - Pieza 12", dimensiones: "100 x 80 cm", estado: "Colección Privada", disponible: false },
-  { archivo: "13RB.webp", titulo: "Serie RB - Robot", dimensiones: "190 x 90 cm", estado: "Colección Privada", disponible: false }
+  { archivo: "1sg.webp", titulo: "Serie SG - Pieza 1" },
+  { archivo: "2sg.webp", titulo: "Serie SG - Pieza 2" },
+  { archivo: "3sg.webp", titulo: "Serie SG - Pieza 3" },
+  { archivo: "4sg.webp", titulo: "Serie SG - Pieza 4" },
+  { archivo: "5sg.webp", titulo: "Serie SG - Pieza 5" },
+  { archivo: "6sg.webp", titulo: "Serie SG - Pieza 6" },
+  { archivo: "7sg.webp", titulo: "Serie SG - Pieza 7" },
+  { archivo: "8sg.webp", titulo: "Serie SG - Pieza 8" },
+  { archivo: "9sg.webp", titulo: "Serie SG - Pieza 9" },
+  { archivo: "10sg.webp", titulo: "Serie SG - Pieza 10" },
+  { archivo: "11sg.webp", titulo: "Serie SG - Pieza 11" },
+  { archivo: "12AZ.webp", titulo: "Serie AZ - Pieza 12" },
+  { archivo: "13RB.webp", titulo: "Serie RB - Robot" }
 ];
 
 const rutaOleo = "./1Oleo/";
@@ -25,7 +25,6 @@ if (contenedorOleo) {
   obrasOleo.forEach((obra) => {
     const article = document.createElement("article");
     article.className = "tarjeta-obra";
-    const estiloEstado = obra.disponible ? 'color: green; font-weight: bold;' : 'color: gray; font-weight: bold;';
     const urlImagen = `${rutaOleo}${obra.archivo}`;
 
     article.innerHTML = `
@@ -34,8 +33,7 @@ if (contenedorOleo) {
       </a>
       <h3>${obra.titulo}</h3>
       <p><strong>Técnica:</strong> Óleo sobre lienzo</p>
-      <p><strong>Dimensiones:</strong> ${obra.dimensiones}</p>
-      <p><strong>Estado:</strong> <span style="${estiloEstado}">${obra.estado}</span></p>
+      <p><strong>Estado:</strong> <span style="color: gray; font-weight: bold;">Colección personal</span></p>
     `;
     contenedorOleo.appendChild(article);
   });
