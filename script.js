@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
       pestanas.forEach((p) => p.classList.remove("active"));
       secciones.forEach((s) => s.classList.remove("active"));
 
-      // Activar la pestaña clickeada
+      // Activar la pestaña cliqueada
       pestana.classList.add("active");
 
       // Buscar la sección correspondiente mediante data-seccion
