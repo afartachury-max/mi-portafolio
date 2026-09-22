@@ -4,14 +4,14 @@
 const obrasOleo = [
   { archivo: "1Frida.webp", titulo: "Frida 1" },
   { archivo: "2Frida.webp", titulo: "Frida 2" },
-  { archivo: "3NYD.webp", titulo: "Obra 3 NYD" },
-  { archivo: "4NYD.webp", titulo: "Obra 4 NYD" },
-  { archivo: "5STG.webp", titulo: "Obra 5 STG" },
-  { archivo: "6STG.webp", titulo: "Obra 6 STG" },
-  { archivo: "7RD.webp", titulo: "Obra 7 RD" },
-  { archivo: "8RD.webp", titulo: "Obra 8 RD" },
-  { archivo: "9RD.webp", titulo: "Obra 9 RD" },
-  { archivo: "10RD.webp", titulo: "Obra 10 RD" },
+  { archivo: "3Frida.webp", titulo: "Frida 3" },
+  { archivo: "4Frida.webp", titulo: "Frida 4" },
+  { archivo: "5Frida.webp", titulo: "Frida 5" },
+  { archivo: "6Frida.webp", titulo: "Frida 6" },
+  { archivo: "7Frida.webp", titulo: "Frida 7" },
+  { archivo: "8Frida.webp", titulo: "Frida 8" },
+  { archivo: "9Frida.webp", titulo: "Frida 9" },
+  { archivo: "10RD.webp", titulo: "Resiliencia 10" },
   { archivo: "11SG.webp", titulo: "Serie SG - Pieza 11" },
   { archivo: "12AZ.webp", titulo: "Serie AZ - Pieza 12" },
   { archivo: "13RB.webp", titulo: "Serie RB - Robot" }
@@ -28,7 +28,7 @@ if (contenedorOleo) {
     const urlImagen = `${rutaOleo}${obra.archivo}`;
 
     article.innerHTML = `
-      <a href="${urlImagen}" class="lightbox-link" data-pswp-src="${urlImagen}" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
+      <a href="${urlImagen}" class="lightbox-link" data-pswp-src="${urlImagen}" data-pswp-width="1920" data-pswp-height="1080">
         <img src="${urlImagen}" alt="${obra.titulo}" loading="lazy">
       </a>
       <h3>${obra.titulo}</h3>
@@ -43,12 +43,12 @@ if (contenedorOleo) {
 // 2. Categoría Retratos Grafito
 // ==========================================
 const obrasRetratosGrafito = [
-  { archivo: "grafito1.jpg", titulo: "Retrato 1" },
-  { archivo: "grafito2.jpg", titulo: "Retrato 2" },
-  { archivo: "grafito3.jpg", titulo: "Retrato 3" },
-  { archivo: "grafito4.jpg", titulo: "Retrato 4" },
-  { archivo: "grafito5.jpg", titulo: "Retrato 5" },
-  { archivo: "grafito6.jpg", titulo: "Retrato 6" },
+  { archivo: "grafito1.webp", titulo: "Retrato 1" },
+  { archivo: "grafito2.webp", titulo: "Retrato 2" },
+  { archivo: "grafito3.webp", titulo: "Retrato 3" },
+  { archivo: "grafito4.webp", titulo: "Retrato 4" },
+  { archivo: "grafito5.webp", titulo: "Retrato 5" },
+  { archivo: "grafito6.webp", titulo: "Retrato 6" },
   { archivo: "grafito7.webp", titulo: "Retrato 7" },
   { archivo: "grafito8.webp", titulo: "Retrato 8" },
   { archivo: "grafito9.webp", titulo: "Retrato 9" }
@@ -65,7 +65,7 @@ if (contenedorRetratosGrafito) {
     const urlImagen = `${rutaRetratosGrafito}${obra.archivo}`;
 
     article.innerHTML = `
-      <a href="${urlImagen}" class="lightbox-link" data-pswp-src="${urlImagen}" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
+      <a href="${urlImagen}" class="lightbox-link" data-pswp-src="${urlImagen}" data-pswp-width="1920" data-pswp-height="1080">
         <img src="${urlImagen}" alt="${obra.titulo}" loading="lazy">
       </a>
       <h3>${obra.titulo}</h3>
@@ -104,7 +104,7 @@ if (contenedorCamisas) {
     const urlImagen = `${rutaCamisas}${obra.archivo}`;
 
     article.innerHTML = `
-      <a href="${urlImagen}" class="lightbox-link" data-pswp-src="${urlImagen}" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
+      <a href="${urlImagen}" class="lightbox-link" data-pswp-src="${urlImagen}" data-pswp-width="1920" data-pswp-height="1080">
         <img src="${urlImagen}" alt="${obra.titulo}" loading="lazy">
       </a>
       <h3>${obra.titulo}</h3>
@@ -140,7 +140,7 @@ if (contenedorMuralismo) {
     const urlImagen = `${rutaMuralismo}${encodeURIComponent(obra.archivo)}`;
 
     article.innerHTML = `
-      <a href="${urlImagen}" class="lightbox-link" data-pswp-src="${urlImagen}" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
+      <a href="${urlImagen}" class="lightbox-link" data-pswp-src="${urlImagen}" data-pswp-width="1920" data-pswp-height="1080">
         <img src="${urlImagen}" alt="${obra.titulo}" loading="lazy">
       </a>
       <h3>${obra.titulo}</h3>
