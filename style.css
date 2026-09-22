@@ -61,6 +61,67 @@
     align-items: flex-start;
   }
 }
+/* Estilos del Encabezado y Redes de Contacto */
+header {
+  text-align: center;
+  padding: 30px 15px 15px;
+}
+
+.subtitulo {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.redes-contacto {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.enlace-contacto {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid #333;
+  border-radius: 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.enlace-contacto:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Menú de Pestañas */
+.menu-pestanas {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.pestana {
+  padding: 10px 18px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.pestana.active,
+.pestana:hover {
+  color: #000;
+  border-bottom-color: #000;
+}
 .enlace-contacto:hover {
   color: #ffffff !important;               /* Mantiene el texto blanco al pasar el cursor */
   background-color: rgba(255, 255, 255, 0.4);
