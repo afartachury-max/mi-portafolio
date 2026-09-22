@@ -37,6 +37,7 @@ if (contenedorOleo) {
   });
 }
 
+
 // ==========================================
 // 2. Categoría Retratos Grafito
 // ==========================================
@@ -61,7 +62,6 @@ if (contenedorRetratosGrafito) {
     const article = document.createElement("article");
     article.className = "tarjeta-obra";
     const urlImagen = `${rutaRetratosGrafito}${obra.archivo}`;
-
     article.innerHTML = `
       <a href="${urlImagen}" class="lightbox-link" data-pswp-src="${urlImagen}" data-pswp-width="1920" data-pswp-height="1080">
         <img src="${urlImagen}" alt="${obra.titulo}" loading="lazy">
@@ -73,6 +73,7 @@ if (contenedorRetratosGrafito) {
     contenedorRetratosGrafito.appendChild(article);
   });
 }
+
 
 // ==========================================
 // 3. Categoría Camisas
@@ -100,7 +101,6 @@ if (contenedorCamisas) {
     const article = document.createElement("article");
     article.className = "tarjeta-obra";
     const urlImagen = `${rutaCamisas}${obra.archivo}`;
-
     article.innerHTML = `
       <a href="${urlImagen}" class="lightbox-link" data-pswp-src="${urlImagen}" data-pswp-width="1920" data-pswp-height="1080">
         <img src="${urlImagen}" alt="${obra.titulo}" loading="lazy">
@@ -112,6 +112,8 @@ if (contenedorCamisas) {
     contenedorCamisas.appendChild(article);
   });
 }
+
+
 // ==========================================
 // 4. Categoría Muralismo
 // ==========================================
@@ -145,8 +147,10 @@ if (contenedorMuralismo) {
     contenedorMuralismo.appendChild(article);
   });
 }
+
+
 // ==========================================
-// 5. Navegación por pestañas
+// 5. Navegación por Pestañas
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
   const pestanas = document.querySelectorAll(".pestana");
@@ -155,14 +159,18 @@ document.addEventListener("DOMContentLoaded", () => {
   pestanas.forEach((pestana) => {
     pestana.addEventListener("click", (e) => {
       e.preventDefault();
-      
+
+      // Quitar estado activo de todas las pestañas y secciones
       pestanas.forEach((p) => p.classList.remove("active"));
       secciones.forEach((s) => s.classList.remove("active"));
 
+      // Activar la pestaña clickeada
       pestana.classList.add("active");
+
+      // Buscar la sección correspondiente mediante data-seccion
       const idSeccion = pestana.getAttribute("data-seccion");
       const seccionObjetivo = document.getElementById(idSeccion);
-      
+
       if (seccionObjetivo) {
         seccionObjetivo.classList.add("active");
       }
