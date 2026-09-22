@@ -8,65 +8,56 @@
 </head>
 <body>
 
-  <!-- Encabezado y Navegación -->
-  <header class="header-principal">
-    <div class="logo-titulo">
-      <h1>Flavio Achury</h1>
-      <p class="subtitulo">Portafolio de Arte</p>
-    </div>
-    <nav class="nav-principal">
+  <!-- Encabezado y Navegación por pestañas -->
+  <header>
+    <h1>Flavio Achury</h1>
+    <nav>
       <ul>
-        <li><a href="#galeria-oleo" class="nav-link active">Óleo</a></li>
-        <li><a href="#galeria-mural" class="nav-link">Muralismo</a></li>
-        <li><a href="#galeria-camisas" class="nav-link">Camisas</a></li>
-        <li><a href="#galeria-retratos" class="nav-link">Retratos</a></li>
-        <li><a href="#sobre-el-artista" class="nav-link">Sobre el artista</a></li>
+        <li><a href="#" class="pestana active" data-seccion="seccion-oleo">Óleo</a></li>
+        <li><a href="#" class="pestana" data-seccion="seccion-muralismo">Muralismo</a></li>
+        <li><a href="#" class="pestana" data-seccion="seccion-camisas">Camisas</a></li>
+        <li><a href="#" class="pestana" data-seccion="seccion-retratos">Retratos</a></li>
+        <li><a href="#" class="pestana" data-seccion="seccion-sobre-el-artista">Sobre el artista</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="contenedor-principal">
-    <!-- 1. Sección Óleo -->
-    <section id="galeria-oleo" class="seccion-contenido activa">
+  <main>
+    <!-- 1. Categoría Óleo -->
+    <section id="seccion-oleo" class="contenido-seccion active">
       <h2>Pintura al Óleo</h2>
-      <div id="contenedor-oleo" class="galeria-grid"></div>
+      <div id="galeria-oleo" class="galeria-grid"></div>
     </section>
 
-    <!-- 2. Sección Muralismo -->
-    <section id="galeria-mural" class="seccion-contenido">
+    <!-- 2. Categoría Muralismo -->
+    <section id="seccion-muralismo" class="contenido-seccion">
       <h2>Muralismo</h2>
-      <div id="contenedor-mural" class="galeria-grid"></div>
+      <div id="galeria-mural" class="galeria-grid"></div>
     </section>
 
-    <!-- 3. Sección Camisas -->
-    <section id="galeria-camisas" class="seccion-contenido">
+    <!-- 3. Categoría Camisas -->
+    <section id="seccion-camisas" class="contenido-seccion">
       <h2>Camisas / Decoloración</h2>
-      <div id="contenedor-camisas" class="galeria-grid"></div>
+      <div id="galeria-camisas" class="galeria-grid"></div>
     </section>
 
-    <!-- 4. Sección Retratos -->
-    <section id="galeria-retratos" class="seccion-contenido">
+    <!-- 4. Categoría Retratos -->
+    <section id="seccion-retratos" class="contenido-seccion">
       <h2>Retratos en Grafito</h2>
-      <div id="contenedor-retratos" class="galeria-grid"></div>
+      <div id="galeria-retratos-grafito" class="galeria-grid"></div>
     </section>
 
-    <!-- 5. Sección Sobre el artista -->
-    <section id="sobre-el-artista" class="seccion-contenido">
+    <!-- 5. Sobre el artista -->
+    <section id="seccion-sobre-el-artista" class="contenido-seccion">
       <h2>Sobre el Artista</h2>
       <div class="perfil-contenedor">
-        <div class="perfil-tarjeta">
-          <img src="./perfil/perfil2l.jpg" alt="Foto de Flavio Achury" class="foto-perfil" loading="lazy">
-          <div class="biografia">
-            <p>Apasionado por la forma, el color y la riqueza de los detalles, entiendo el arte como un proceso de constante aprendizaje y evolución. En cada técnica desde el lápiz, el óleo, el acrílico, el dibujo en grafito, decoloración con hipoclorito y el muralismo, me dedico a explorar la expresión visual con dinamismo y precisión, buscando conectar emociones a través de la luz y la materia. La diferencia entre algo bueno y excelente es el tiempo extra.</p>
-          </div>
+        <img src="./perfil/perfil.jpg" alt="Foto de Flavio Achury" class="foto-perfil" loading="lazy">
+        <div class="biografia">
+          <p>Apasionado por la forma, el color y la riqueza de los detalles, entiendo el arte como un proceso de constante aprendizaje y evolución. En cada técnica desde el lápiz, el óleo, el acrílico, el dibujo en grafito, decoloración con hipoclorito y el muralismo, me dedico a explorar la expresión visual con dinamismo y precisión, buscando conectar emociones a través de la luz y la materia. La diferencia entre algo bueno y excelente es el tiempo extra.</p>
         </div>
       </div>
     </section>
   </main>
-
-  <footer>
-    <p>&copy; Flavio Achury - Todos los derechos reservados</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
