@@ -2,19 +2,19 @@
 // 1. Categoría Óleo
 // ==========================================
 const obrasOleo = [
-  { archivo: "1Frida.webp", titulo: "Frida 1" },
-  { archivo: "2Frida.webp", titulo: "Frida 2" },
-  { archivo: "3Frida.webp", titulo: "Frida 3" },
-  { archivo: "4Frida.webp", titulo: "Frida 4" },
-  { archivo: "5Frida.webp", titulo: "Frida 5" },
-  { archivo: "6Frida.webp", titulo: "Frida 6" },
-  { archivo: "7Frida.webp", titulo: "Frida 7" },
-  { archivo: "8Frida.webp", titulo: "Frida 8" },
-  { archivo: "9Frida.webp", titulo: "Frida 9" },
-  { archivo: "10RD.webp", titulo: "Resiliencia 10" },
-  { archivo: "11SG.webp", titulo: "Serie SG - Pieza 11" },
-  { archivo: "12AZ.webp", titulo: "Serie AZ - Pieza 12" },
-  { archivo: "13RB.webp", titulo: "Serie RB - Robot" }
+  { archivo: "1Frida.webp", titulo: "Obra Óleo 1" },
+  { archivo: "2Frida.webp", titulo: "Obra Óleo 2" },
+  { archivo: "3NYD.webp", titulo: "Obra Óleo 3" },
+  { archivo: "4NYD.webp", titulo: "Obra Óleo 4" },
+  { archivo: "5STG.webp", titulo: "Obra Óleo 5" },
+  { archivo: "6STG.webp", titulo: "Obra Óleo 6" },
+  { archivo: "7RD.webp", titulo: "Obra Óleo 7" },
+  { archivo: "8RD.webp", titulo: "Obra Óleo 8" },
+  { archivo: "9RD.webp", titulo: "Obra Óleo 9" },
+  { archivo: "10RD.webp", titulo: "Obra Óleo 10" },
+  { archivo: "11SG.webp", titulo: "Obra Óleo 11" },
+  { archivo: "12AZ.webp", titulo: "Obra Óleo 12" },
+  { archivo: "13RB.webp", titulo: "Obra Óleo 13" }
 ];
 
 const rutaOleo = "./1Oleo/";
@@ -26,14 +26,12 @@ if (contenedorOleo) {
     const article = document.createElement("article");
     article.className = "tarjeta-obra";
     const urlImagen = `${rutaOleo}${obra.archivo}`;
-
     article.innerHTML = `
       <a href="${urlImagen}" class="lightbox-link" data-pswp-src="${urlImagen}" data-pswp-width="1920" data-pswp-height="1080">
         <img src="${urlImagen}" alt="${obra.titulo}" loading="lazy">
       </a>
       <h3>${obra.titulo}</h3>
-      <p><strong>Técnica:</strong> Óleo sobre lienzo</p>
-      <p><strong>Estado:</strong> <span style="color: gray; font-weight: bold;">Colección personal</span></p>
+      <p><strong>Técnica:</strong> Pintura al Óleo</p>
     `;
     contenedorOleo.appendChild(article);
   });
