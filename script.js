@@ -56,7 +56,7 @@ const obrasRetratosGrafito = [
   { archivo: "grafito9.jpg", titulo: "Retrato 9" }
 ];
 
-const rutaRetratosGrafito = "./retratos-grafito/retratos-grafito/";
+const rutaRetratosGrafito = "./retratos-grafito/";
 const contenedorRetratosGrafito = document.getElementById("galeria-retratos-grafito");
 
 if (contenedorRetratosGrafito) {
@@ -79,7 +79,7 @@ if (contenedorRetratosGrafito) {
 }
 
 // ==========================================
-// 3. Categoría Camisas (Corregido con Lightbox)
+// 3. Categoría Camisas
 // ==========================================
 const obrasCamisas = [
   { archivo: "camisa1.webp", titulo: "Camisa Intervenida 1", talla: "M", estado: "Disponible", disponible: true },
