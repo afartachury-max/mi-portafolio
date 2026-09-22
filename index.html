@@ -5,8 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flavio Achury - Portafolio</title>
   <link rel="stylesheet" href="style.css">
+  <!-- 1. Estilos de PhotoSwipe -->
+  <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
 </head>
 <body>
+
+  <!-- ... (tu contenido actual de header, nav y main) ... -->
+
+  <!-- 2. Scripts de PhotoSwipe -->
+  <script type="module">
+    import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js';
+    
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: 'main', // Escucha todas las galerías dentro del main
+      children: 'a.lightbox-link',
+      pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js')
+    });
+    lightbox.init();
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
   <!-- Encabezado con redes y contacto -->
   <header>
