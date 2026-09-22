@@ -2,17 +2,17 @@
 // 1. Categoría Óleo
 // ==========================================
 const obrasOleo = [
-  { archivo: "1SG.webp", titulo: "Serie SG - Pieza 1", dimensiones: "100 x 80 cm", estado: "Colección Privada", disponible: false },
-  { archivo: "2SG.webp", titulo: "Serie SG - Pieza 2", dimensiones: "120 x 90 cm", estado: "Disponible", disponible: true },
-  { archivo: "3SG.webp", titulo: "Serie SG - Pieza 3", dimensiones: "80 x 60 cm", estado: "Colección Privada", disponible: false },
-  { archivo: "4SG.webp", titulo: "Serie SG - Pieza 4", dimensiones: "100 x 100 cm", estado: "Disponible", disponible: true },
-  { archivo: "5SG.webp", titulo: "Serie SG - Pieza 5", dimensiones: "150 x 100 cm", estado: "Colección Privada", disponible: false },
-  { archivo: "6SG.webp", titulo: "Serie SG - Pieza 6", dimensiones: "70 x 50 cm", estado: "Disponible", disponible: true },
-  { archivo: "7SG.webp", titulo: "Serie SG - Pieza 7", dimensiones: "110 x 85 cm", estado: "Colección Privada", disponible: false },
-  { archivo: "8SG.webp", titulo: "Serie SG - Pieza 8", dimensiones: "90 x 90 cm", estado: "Disponible", disponible: true },
-  { archivo: "9SG.webp", titulo: "Serie SG - Pieza 9", dimensiones: "130 x 95 cm", estado: "Colección Privada", disponible: false },
-  { archivo: "10SG.webp", titulo: "Serie SG - Pieza 10", dimensiones: "100 x 80 cm", estado: "Disponible", disponible: true },
-  { archivo: "11SG.webp", titulo: "Serie SG - Pieza 11", dimensiones: "90 x 70 cm", estado: "Colección Privada", disponible: false },
+  { archivo: "1sg.webp", titulo: "Serie SG - Pieza 1", dimensiones: "100 x 80 cm", estado: "Colección Privada", disponible: false },
+  { archivo: "2sg.webp", titulo: "Serie SG - Pieza 2", dimensiones: "120 x 90 cm", estado: "Disponible", disponible: true },
+  { archivo: "3sg.webp", titulo: "Serie SG - Pieza 3", dimensiones: "80 x 60 cm", estado: "Colección Privada", disponible: false },
+  { archivo: "4sg.webp", titulo: "Serie SG - Pieza 4", dimensiones: "100 x 100 cm", estado: "Disponible", disponible: true },
+  { archivo: "5sg.webp", titulo: "Serie SG - Pieza 5", dimensiones: "150 x 100 cm", estado: "Colección Privada", disponible: false },
+  { archivo: "6sg.webp", titulo: "Serie SG - Pieza 6", dimensiones: "70 x 50 cm", estado: "Disponible", disponible: true },
+  { archivo: "7sg.webp", titulo: "Serie SG - Pieza 7", dimensiones: "110 x 85 cm", estado: "Colección Privada", disponible: false },
+  { archivo: "8sg.webp", titulo: "Serie SG - Pieza 8", dimensiones: "90 x 90 cm", estado: "Disponible", disponible: true },
+  { archivo: "9sg.webp", titulo: "Serie SG - Pieza 9", dimensiones: "130 x 95 cm", estado: "Colección Privada", disponible: false },
+  { archivo: "10sg.webp", titulo: "Serie SG - Pieza 10", dimensiones: "100 x 80 cm", estado: "Disponible", disponible: true },
+  { archivo: "11sg.webp", titulo: "Serie SG - Pieza 11", dimensiones: "90 x 70 cm", estado: "Colección Privada", disponible: false },
   { archivo: "12AZ.webp", titulo: "Serie AZ - Pieza 12", dimensiones: "100 x 80 cm", estado: "Colección Privada", disponible: false },
   { archivo: "13RB.webp", titulo: "Serie RB - Robot", dimensiones: "190 x 90 cm", estado: "Colección Privada", disponible: false }
 ];
@@ -51,9 +51,9 @@ const obrasRetratosGrafito = [
   { archivo: "grafito4.jpg", titulo: "Retrato 4" },
   { archivo: "grafito5.jpg", titulo: "Retrato 5" },
   { archivo: "grafito6.jpg", titulo: "Retrato 6" },
-  { archivo: "grafito7.jpg", titulo: "Retrato 7" },
-  { archivo: "grafito8.jpg", titulo: "Retrato 8" },
-  { archivo: "grafito9.jpg", titulo: "Retrato 9" }
+  { archivo: "grafito7.webp", titulo: "Retrato 7" },
+  { archivo: "grafito8.webp", titulo: "Retrato 8" },
+  { archivo: "grafito9.webp", titulo: "Retrato 9" }
 ];
 
 const rutaRetratosGrafito = "./retratos-grafito/";
