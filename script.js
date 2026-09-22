@@ -114,10 +114,21 @@ if (contenedorCamisas) {
 // ==========================================
 // 4. Categoría Muralismo
 // ==========================================
+const obrasMuralismo = [
+  { archivo: "Mural 1.webp", titulo: "Mural 1", dimensiones: "Dimensiones por definir", estado: "Colección Privada", disponible: false },
+  { archivo: "Mural 2.webp", titulo: "Mural 2", dimensiones: "Dimensiones por definir", estado: "Colección Privada", disponible: false },
+  { archivo: "Mural 3.webp", titulo: "Mural 3", dimensiones: "Dimensiones por definir", estado: "Colección Privada", disponible: false },
+  { archivo: "Mural 4.webp", titulo: "Mural 4", dimensiones: "Dimensiones por definir", estado: "Colección Privada", disponible: false },
+  { archivo: "Mural 5.webp", titulo: "Mural 5", dimensiones: "Dimensiones por definir", estado: "Colección Privada", disponible: false },
+  { archivo: "Mural 6.webp", titulo: "Mural 6", dimensiones: "Dimensiones por definir", estado: "Colección Privada", disponible: false },
+  { archivo: "Mural 7.webp", titulo: "Mural 7", dimensiones: "Dimensiones por definir", estado: "Colección Privada", disponible: false },
+  { archivo: "Mural 8.webp", titulo: "Mural 8", dimensiones: "Dimensiones por definir", estado: "Colección Privada", disponible: false }
+];
+
 const rutaMuralismo = "./5 Muralismo/";
 const contenedorMuralismo = document.getElementById("galeria-muralismo");
 
-if (contenedorMuralismo && typeof obrasMuralismo !== 'undefined') {
+if (contenedorMuralismo) {
   contenedorMuralismo.innerHTML = "";
   obrasMuralismo.forEach((obra) => {
     const article = document.createElement("article");
@@ -131,7 +142,6 @@ if (contenedorMuralismo && typeof obrasMuralismo !== 'undefined') {
       </a>
       <h3>${obra.titulo}</h3>
       <p><strong>Técnica:</strong> Muralismo / Acrílico</p>
-      <p><strong>Dimensiones:</strong> ${obra.dimensiones}</p>
       <p><strong>Estado:</strong> <span style="${estiloEstado}">${obra.estado}</span></p>
     `;
     contenedorMuralismo.appendChild(article);
