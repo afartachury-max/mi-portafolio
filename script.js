@@ -65,7 +65,17 @@ document.addEventListener('DOMContentLoaded', () => {
       contenedorOleo.appendChild(article);
     });
   }
-
+const retratosGrafito = [
+  { src: "./retratos-grafito/grafito1.webp", alt: "Retrato 1", titulo: "Retrato 1" },
+  { src: "./retratos-grafito/grafito2.webp", alt: "Retrato 2", titulo: "Retrato 2" },
+  { src: "./retratos-grafito/grafito3.webp", alt: "Retrato 3", titulo: "Retrato 3" },
+  { src: "./retratos-grafito/grafito4.webp", alt: "Retrato 4", titulo: "Retrato 4" },
+  { src: "./retratos-grafito/grafito5.webp", alt: "Retrato 5", titulo: "Retrato 5" },
+  { src: "./retratos-grafito/grafito6.webp", alt: "Retrato 6", titulo: "Retrato 6" },
+  { src: "./retratos-grafito/grafito7.webp", alt: "Retrato 7", titulo: "Retrato 7" },
+  { src: "./retratos-grafito/grafito8.webp", alt: "Retrato 8", titulo: "Retrato 8" },
+  { src: "./retratos-grafito/grafito9.webp", alt: "Retrato 9", titulo: "Retrato 9" }
+];
   // 3. Arreglo completo de la categoría Muralismo (8 imágenes)
   const obrasMuralismo = [
     { archivo: "Mural 1.webp", titulo: "Mural 1", dimensiones: "Dimensiones variables", estado: "Colección Privada", disponible: false },
