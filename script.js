@@ -14,7 +14,7 @@ const obrasOleo = [
   { archivo: "10SG.webp", titulo: "Serie SG - Pieza 10", dimensiones: "100 x 80 cm", estado: "Disponible", disponible: true },
   { archivo: "11SG.webp", titulo: "Serie SG - Pieza 11", dimensiones: "90 x 70 cm", estado: "Colección Privada", disponible: false },
   { archivo: "12AZ.webp", titulo: "Serie AZ - Pieza 12", dimensiones: "100 x 80 cm", estado: "Colección Privada", disponible: false },
-  { archivo: "13RB.webp", titulo: "Serie rb - robot", dimensiones: "190 x 90 cm", estado: "Colección Privada", disponible: false }
+  { archivo: "13RB.webp", titulo: "Serie RB - Robot", dimensiones: "190 x 90 cm", estado: "Colección Privada", disponible: false }
 ];
 
 const rutaOleo = "./1Oleo/";
@@ -45,15 +45,15 @@ if (contenedorOleo) {
 // 2. Categoría Retratos Grafito
 // ==========================================
 const obrasRetratosGrafito = [
-  { archivo: "grafito1.webp", titulo: "Retrato 1" },
-  { archivo: "grafito2.webp", titulo: "Retrato 2" },
-  { archivo: "grafito3.webp", titulo: "Retrato 3" },
-  { archivo: "grafito4.webp", titulo: "Retrato 4" },
-  { archivo: "grafito5.webp", titulo: "Retrato 5" },
-  { archivo: "grafito6.webp", titulo: "Retrato 6" },
-  { archivo: "grafito7.webp", titulo: "Retrato 7" },
-  { archivo: "grafito8.webp", titulo: "Retrato 8" },
-  { archivo: "grafito9.webp", titulo: "Retrato 9" }
+  { archivo: "grafito1.jpg", titulo: "Retrato 1" },
+  { archivo: "grafito2.jpg", titulo: "Retrato 2" },
+  { archivo: "grafito3.jpg", titulo: "Retrato 3" },
+  { archivo: "grafito4.jpg", titulo: "Retrato 4" },
+  { archivo: "grafito5.jpg", titulo: "Retrato 5" },
+  { archivo: "grafito6.jpg", titulo: "Retrato 6" },
+  { archivo: "grafito7.jpg", titulo: "Retrato 7" },
+  { archivo: "grafito8.jpg", titulo: "Retrato 8" },
+  { archivo: "grafito9.jpg", titulo: "Retrato 9" }
 ];
 
 const rutaRetratosGrafito = "./retratos-grafito/";
@@ -82,9 +82,17 @@ if (contenedorRetratosGrafito) {
 // 3. Categoría Camisas
 // ==========================================
 const obrasCamisas = [
-  { archivo: "camisa1.webp", titulo: "Camisa Intervenida 1", talla: "M", estado: "Disponible", disponible: true },
-  { archivo: "camisa2.webp", titulo: "Camisa Intervenida 2", talla: "L", estado: "Colección Privada", disponible: false },
-  { archivo: "camisa3.webp", titulo: "Camisa Intervenida 3", talla: "S", estado: "Disponible", disponible: true }
+  { archivo: "camisa1.webp", titulo: "Camisa 1" },
+  { archivo: "camisa2.webp", titulo: "Camisa 2" },
+  { archivo: "camisa3.webp", titulo: "Camisa 3" },
+  { archivo: "camisa4.webp", titulo: "Camisa 4" },
+  { archivo: "Camisa5.webp", titulo: "Camisa 5" },
+  { archivo: "Camisa6.webp", titulo: "Camisa 6" },
+  { archivo: "Camisa7.webp", titulo: "Camisa 7" },
+  { archivo: "Camisa8.webp", titulo: "Camisa 8" },
+  { archivo: "Camisa9.webp", titulo: "Camisa 9" },
+  { archivo: "Camisa10.webp", titulo: "Camisa 10" },
+  { archivo: "Camisa11.webp", titulo: "Camisa 11" }
 ];
 
 const rutaCamisas = "./camisas/";
@@ -95,7 +103,6 @@ if (contenedorCamisas) {
   obrasCamisas.forEach((obra) => {
     const article = document.createElement("article");
     article.className = "tarjeta-obra";
-    const estiloEstado = obra.disponible ? 'color: green; font-weight: bold;' : 'color: gray; font-weight: bold;';
     const urlImagen = `${rutaCamisas}${obra.archivo}`;
 
     article.innerHTML = `
@@ -103,9 +110,8 @@ if (contenedorCamisas) {
         <img src="${urlImagen}" alt="${obra.titulo}" loading="lazy">
       </a>
       <h3>${obra.titulo}</h3>
-      <p><strong>Técnica:</strong> Textil Intervenido</p>
-      <p><strong>Talla:</strong> ${obra.talla}</p>
-      <p><strong>Estado:</strong> <span style="${estiloEstado}">${obra.estado}</span></p>
+      <p><strong>Técnica:</strong> Textil Intervenido / Decoloración</p>
+      <p><strong>Estado:</strong> <span style="color: gray; font-weight: bold;">Colección personal</span></p>
     `;
     contenedorCamisas.appendChild(article);
   });
@@ -115,14 +121,14 @@ if (contenedorCamisas) {
 // 4. Categoría Muralismo
 // ==========================================
 const obrasMuralismo = [
-  { archivo: "Mural 1.webp", titulo: "Mural 1", dimensiones: "Dimensiones por definir", estado: "Colección Privada", disponible: false },
-  { archivo: "Mural 2.webp", titulo: "Mural 2", dimensiones: "Dimensiones por definir", estado: "Colección Privada", disponible: false },
-  { archivo: "Mural 3.webp", titulo: "Mural 3", dimensiones: "Dimensiones por definir", estado: "Colección Privada", disponible: false },
-  { archivo: "Mural 4.webp", titulo: "Mural 4", dimensiones: "Dimensiones por definir", estado: "Colección Privada", disponible: false },
-  { archivo: "Mural 5.webp", titulo: "Mural 5", dimensiones: "Dimensiones por definir", estado: "Colección Privada", disponible: false },
-  { archivo: "Mural 6.webp", titulo: "Mural 6", dimensiones: "Dimensiones por definir", estado: "Colección Privada", disponible: false },
-  { archivo: "Mural 7.webp", titulo: "Mural 7", dimensiones: "Dimensiones por definir", estado: "Colección Privada", disponible: false },
-  { archivo: "Mural 8.webp", titulo: "Mural 8", dimensiones: "Dimensiones por definir", estado: "Colección Privada", disponible: false }
+  { archivo: "Mural 1.webp", titulo: "Mural 1" },
+  { archivo: "Mural 2.webp", titulo: "Mural 2" },
+  { archivo: "Mural 3.webp", titulo: "Mural 3" },
+  { archivo: "Mural 4.webp", titulo: "Mural 4" },
+  { archivo: "Mural 5.webp", titulo: "Mural 5" },
+  { archivo: "Mural 6.webp", titulo: "Mural 6" },
+  { archivo: "Mural 7.webp", titulo: "Mural 7" },
+  { archivo: "Mural 8.webp", titulo: "Mural 8" }
 ];
 
 const rutaMuralismo = "./5 Muralismo/";
@@ -133,7 +139,6 @@ if (contenedorMuralismo) {
   obrasMuralismo.forEach((obra) => {
     const article = document.createElement("article");
     article.className = "tarjeta-obra";
-    const estiloEstado = obra.disponible ? 'color: green; font-weight: bold;' : 'color: gray; font-weight: bold;';
     const urlImagen = `${rutaMuralismo}${encodeURIComponent(obra.archivo)}`;
 
     article.innerHTML = `
@@ -142,7 +147,7 @@ if (contenedorMuralismo) {
       </a>
       <h3>${obra.titulo}</h3>
       <p><strong>Técnica:</strong> Muralismo / Acrílico</p>
-      <p><strong>Estado:</strong> <span style="${estiloEstado}">${obra.estado}</span></p>
+      <p><strong>Estado:</strong> <span style="color: gray; font-weight: bold;">Colección personal</span></p>
     `;
     contenedorMuralismo.appendChild(article);
   });
