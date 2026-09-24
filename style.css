@@ -136,3 +136,57 @@ header {
   background-color: rgba(255, 255, 255, 0.4);
   transform: translateY(-2px);
 }
+/* ==========================================
+   Estilos del Encabezado Verde Institucional
+   ========================================== */
+header, .banner-presentacion {
+  background-color: #05693C !important;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header h1, .banner-presentacion h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 10px 0 5px 0;
+  color: #ffffff !important;
+}
+
+header .subtitulo, .banner-presentacion .subtitulo {
+  font-size: 1.1rem;
+  color: #e0f2e9 !important;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+}
+
+/* Botones de contacto en el encabezado */
+header .redes-contacto, .banner-presentacion .redes-contacto {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+header .enlace-contacto, .banner-presentacion .enlace-contacto {
+  background-color: #ffffff !important;
+  color: #05693C !important;
+  padding: 8px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+header .enlace-contacto:hover, .banner-presentacion .enlace-contacto:hover {
+  background-color: #f0f0f0 !important;
+  color: #05693C !important;
+  transform: translateY(-2px);
+}
