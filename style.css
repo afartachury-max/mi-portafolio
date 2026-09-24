@@ -190,3 +190,19 @@ header .enlace-contacto:hover, .banner-presentacion .enlace-contacto:hover {
   color: #05693C !important;
   transform: translateY(-2px);
 }
+/* Asegurar que el logo nunca se salga de la pantalla y sea pequeño en móvil */
+header img[alt="Logo Flavio Achury"] {
+    max-width: 100% !important; /* El logo nunca será más ancho que la pantalla */
+    width: auto !important;     /* Mantiene la proporción original */
+    height: auto !important;    /* Mantiene la proporción original */
+    display: block;             
+    margin-left: auto;
+    margin-right: auto;         /* Centra el logo */
+}
+
+/* Ajuste específico para pantallas de PC (más de 768px de ancho) */
+@media (min-width: 768px) {
+    header img[alt="Logo Flavio Achury"] {
+        max-width: 250px !important; /* En PC, el logo tendrá un tamaño máximo controlado */
+    }
+}
