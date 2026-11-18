@@ -10,26 +10,7 @@
 </head>
 <body>
 
-  <!-- ... (tu contenido actual de header, nav y main) ... -->
-
-  <!-- 2. Scripts de PhotoSwipe -->
-  <script type="module">
-    import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js';
-    
-    const lightbox = new PhotoSwipeLightbox({
-      gallery: 'main', // Escucha todas las galerías dentro del main
-      children: 'a.lightbox-link',
-      pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js')
-    });
-    lightbox.init();
-  </script>
-
-  <script src="script.js"></script>
-</body>
-</html>
-
-  <!-- Encabezado con redes y contacto -->
-<!-- Encabezado / Banner de Presentación -->
+  <!-- Encabezado / Banner de Presentación -->
   <header class="banner-presentacion">
     <div class="banner-contenido">
       <!-- Tu logotipo en PNG -->
@@ -48,7 +29,7 @@
     </div>
   </header>
 
-<!-- Menú de Pestañas -->
+  <!-- Menú de Pestañas -->
   <nav class="menu-pestanas">
     <a href="#" class="pestana active" data-seccion="camisas">Camisas</a>
     <a href="#" class="pestana" data-seccion="oleo">Óleo</a>
@@ -90,16 +71,28 @@
     </section>
 
     <!-- 6. Sobre el artista -->
-  <section id="sobre-artista" class="contenido-seccion">
-  <h2>Sobre el Artista</h2>
-  <div class="perfil-contenedor">
-    <img src="./perfil/perfil2.webp" alt="Foto de Flavio Achury" class="foto-perfil" loading="lazy">
-    <div class="biografia">
-      <p>Apasionado por la forma, el color y la riqueza de los detalles, entiendo el arte como un proceso de constante aprendizaje y evolución. En cada técnica desde el lápiz, el óleo, el acrílico, el dibujo en grafito, decoloración con hipoclorito y el muralismo, me dedico a explorar la expresión visual con dinamismo y precisión, buscando conectar emociones a través de la luz y la materia. La diferencia entre algo bueno y excelente es el tiempo extra.</p>
-    </div>
-  </div>
-</section>
+    <section id="sobre-artista" class="contenido-seccion">
+      <h2>Sobre el Artista</h2>
+      <div class="perfil-contenedor">
+        <img src="./perfil/perfil2.webp" alt="Foto de Flavio Achury" class="foto-perfil" loading="lazy">
+        <div class="biografia">
+          <p>Entiendo el arte como un ejercicio de observación profunda sobre la luz, la sombra y el movimiento natural de las formas orgánicas. Mi práctica transita con naturalidad por el dominio del pincel en el óleo y el acrílico, el rigor tonal del claroscuro en grafito, la escala monumental del mural y la experimentación química sobre algodón. Cada pieza es una exploración cromática donde la técnica no es un fin, sino el vehículo para capturar la vitalidad de lo orgánico y transformar la superficie en una experiencia visual con carácter propio. La diferencia entre algo bueno y excelente es el tiempo extra.</p>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- 2. Scripts de PhotoSwipe -->
+  <script type="module">
+    import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js';
+    
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: 'main', // Escucha todas las galerías dentro del main
+      children: 'a.lightbox-link',
+      pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js')
+    });
+    lightbox.init();
+  </script>
 
   <script src="script.js"></script>
 </body>
